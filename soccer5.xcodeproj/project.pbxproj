@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09B61E8DB21F287A846067EC /* Pods_soccer5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */; };
+		9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */; };
+		9E9862C81CA989AD0075B016 /* FacebookSharingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862C71CA989AD0075B016 /* FacebookSharingHelper.swift */; };
+		9E9862CA1CA989D10075B016 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862C91CA989D10075B016 /* UserDefault.swift */; };
+		9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862CC1CA98AA40075B016 /* LoginViewController.swift */; };
+		9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862CF1CA99E520075B016 /* FacebookFriend.swift */; };
+		9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D11CA99E870075B016 /* UserInfo.swift */; };
+		9E9862D51CA9A4530075B016 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D41CA9A4530075B016 /* SignUpViewController.swift */; };
 		9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */; };
 		9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248F1CA46A3C00E68315 /* ViewController.swift */; };
 		9ECC24931CA46A3C00E68315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24911CA46A3C00E68315 /* Main.storyboard */; };
@@ -27,6 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.debug.xcconfig"; sourceTree = "<group>"; };
+		93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_soccer5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
+		9E9862C71CA989AD0075B016 /* FacebookSharingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSharingHelper.swift; sourceTree = "<group>"; };
+		9E9862C91CA989D10075B016 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		9E9862CC1CA98AA40075B016 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E9862CF1CA99E520075B016 /* FacebookFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFriend.swift; sourceTree = "<group>"; };
+		9E9862D11CA99E870075B016 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9E9862D41CA9A4530075B016 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9ECC248A1CA46A3C00E68315 /* soccer5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soccer5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECC248F1CA46A3C00E68315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 		9ECC24A11CA46A3D00E68315 /* soccer5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soccer5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soccer5Tests.swift; sourceTree = "<group>"; };
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B61E8DB21F287A846067EC /* Pods_soccer5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +77,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31D001A345947F1307455214 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */,
+				F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E9862BE1CA980550075B016 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */,
+				9E9862C71CA989AD0075B016 /* FacebookSharingHelper.swift */,
+				9E9862C91CA989D10075B016 /* UserDefault.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9E9862BF1CA980630075B016 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
+		9E9862C01CA9806C0075B016 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		9E9862C11CA980750075B016 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862D31CA9A4060075B016 /* Sign Up */,
+				9E9862CB1CA98A830075B016 /* Login */,
+				9ECC248F1CA46A3C00E68315 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9E9862C21CA9807D0075B016 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC24911CA46A3C00E68315 /* Main.storyboard */,
+				9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9E9862C31CA980910075B016 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862C41CA9818A0075B016 /* Core Data */,
+				9ECC249C1CA46A3C00E68315 /* Info.plist */,
+				9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		9E9862C41CA9818A0075B016 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC24941CA46A3C00E68315 /* soccer5.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		9E9862CB1CA98A830075B016 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862CC1CA98AA40075B016 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		9E9862CE1CA99E1C0075B016 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862CF1CA99E520075B016 /* FacebookFriend.swift */,
+				9E9862D11CA99E870075B016 /* UserInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9E9862D31CA9A4060075B016 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				9E9862D41CA9A4530075B016 /* SignUpViewController.swift */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
 		9ECC24811CA46A3B00E68315 = {
 			isa = PBXGroup;
 			children = (
 				9ECC248C1CA46A3C00E68315 /* soccer5 */,
 				9ECC24A41CA46A3D00E68315 /* soccer5Tests */,
 				9ECC248B1CA46A3C00E68315 /* Products */,
+				31D001A345947F1307455214 /* Pods */,
+				EE5DBC59CFBF90C4F6735B5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +195,14 @@
 		9ECC248C1CA46A3C00E68315 /* soccer5 */ = {
 			isa = PBXGroup;
 			children = (
-				9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */,
-				9ECC248F1CA46A3C00E68315 /* ViewController.swift */,
-				9ECC24911CA46A3C00E68315 /* Main.storyboard */,
+				9E9862CE1CA99E1C0075B016 /* Model */,
+				9E9862C31CA980910075B016 /* Configuration */,
+				9E9862C21CA9807D0075B016 /* Storyboards */,
+				9E9862C11CA980750075B016 /* Controllers */,
+				9E9862C01CA9806C0075B016 /* Styles */,
+				9E9862BF1CA980630075B016 /* WebServices */,
+				9E9862BE1CA980550075B016 /* Helpers */,
 				9ECC24971CA46A3C00E68315 /* Assets.xcassets */,
-				9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */,
-				9ECC249C1CA46A3C00E68315 /* Info.plist */,
-				9ECC24941CA46A3C00E68315 /* soccer5.xcdatamodeld */,
 			);
 			path = soccer5;
 			sourceTree = "<group>";
@@ -99,6 +216,14 @@
 			path = soccer5Tests;
 			sourceTree = "<group>";
 		};
+		EE5DBC59CFBF90C4F6735B5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ECC24AA1CA46A3D00E68315 /* Build configuration list for PBXNativeTarget "soccer5" */;
 			buildPhases = (
+				95D3DEA110D1D42BB35A8026 /* Check Pods Manifest.lock */,
 				9ECC24861CA46A3B00E68315 /* Sources */,
 				9ECC24871CA46A3B00E68315 /* Frameworks */,
 				9ECC24881CA46A3B00E68315 /* Resources */,
+				DF6049151347B44EE3672B27 /* Embed Pods Frameworks */,
+				19F062AC4923C97730635236 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,14 +325,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19F062AC4923C97730635236 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soccer5/Pods-soccer5-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95D3DEA110D1D42BB35A8026 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF6049151347B44EE3672B27 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soccer5/Pods-soccer5-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9ECC24861CA46A3B00E68315 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
+				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,
+				9E9862D51CA9A4530075B016 /* SignUpViewController.swift in Sources */,
+				9E9862CA1CA989D10075B016 /* UserDefault.swift in Sources */,
+				9E9862C81CA989AD0075B016 /* FacebookSharingHelper.swift in Sources */,
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
+				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
+				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,9 +512,11 @@
 		};
 		9ECC24AB1CA46A3D00E68315 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = soccer5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,9 +525,11 @@
 		};
 		9ECC24AC1CA46A3D00E68315 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = soccer5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +579,7 @@
 				9ECC24AC1CA46A3D00E68315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ECC24AD1CA46A3D00E68315 /* Build configuration list for PBXNativeTarget "soccer5Tests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +588,7 @@
 				9ECC24AF1CA46A3D00E68315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
