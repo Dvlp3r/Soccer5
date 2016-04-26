@@ -14,7 +14,8 @@
 		9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862CC1CA98AA40075B016 /* LoginViewController.swift */; };
 		9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862CF1CA99E520075B016 /* FacebookFriend.swift */; };
 		9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D11CA99E870075B016 /* UserInfo.swift */; };
-		9E9862D51CA9A4530075B016 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D41CA9A4530075B016 /* SignUpViewController.swift */; };
+		9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D41CA9A4530075B016 /* RegisterViewController.swift */; };
+		9EB6A8231CC9654500F67D0F /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */; };
 		9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */; };
 		9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248F1CA46A3C00E68315 /* ViewController.swift */; };
 		9ECC24931CA46A3C00E68315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24911CA46A3C00E68315 /* Main.storyboard */; };
@@ -43,7 +44,8 @@
 		9E9862CC1CA98AA40075B016 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9E9862CF1CA99E520075B016 /* FacebookFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFriend.swift; sourceTree = "<group>"; };
 		9E9862D11CA99E870075B016 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		9E9862D41CA9A4530075B016 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9E9862D41CA9A4530075B016 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		9ECC248A1CA46A3C00E68315 /* soccer5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soccer5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECC248F1CA46A3C00E68315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 		9E9862C11CA980750075B016 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E9862D31CA9A4060075B016 /* Sign Up */,
+				9EB6A8211CC9650F00F67D0F /* Reservation */,
+				9E9862D31CA9A4060075B016 /* Register */,
 				9E9862CB1CA98A830075B016 /* Login */,
 				9ECC248F1CA46A3C00E68315 /* ViewController.swift */,
 			);
@@ -164,12 +167,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		9E9862D31CA9A4060075B016 /* Sign Up */ = {
+		9E9862D31CA9A4060075B016 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				9E9862D41CA9A4530075B016 /* SignUpViewController.swift */,
+				9E9862D41CA9A4530075B016 /* RegisterViewController.swift */,
 			);
-			name = "Sign Up";
+			name = Register;
+			sourceTree = "<group>";
+		};
+		9EB6A8211CC9650F00F67D0F /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */,
+			);
+			name = Reservation;
 			sourceTree = "<group>";
 		};
 		9ECC24811CA46A3B00E68315 = {
@@ -382,10 +393,11 @@
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,
-				9E9862D51CA9A4530075B016 /* SignUpViewController.swift in Sources */,
+				9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */,
 				9E9862CA1CA989D10075B016 /* UserDefault.swift in Sources */,
 				9E9862C81CA989AD0075B016 /* FacebookSharingHelper.swift in Sources */,
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
+				9EB6A8231CC9654500F67D0F /* ReservationViewController.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
 			);

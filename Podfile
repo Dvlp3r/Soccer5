@@ -6,13 +6,14 @@ use_frameworks!
 target 'soccer5' do
 pod 'Alamofire', '~> 3.2.1’
 pod 'AlamofireImage', '~> 2.0'
-pod ‘Bolts‘
-pod ‘FBSDKCoreKit‘
-pod ‘FBSDKShareKit‘
-pod ‘FBSDKLoginKit‘
+pod 'Bolts'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
 pod 'IQKeyboardManagerSwift'
 pod 'SlideMenuControllerSwift’, ‘~> 2.0.3'
-pod "ElasticTransition"
+pod 'ElasticTransition'
+pod 'AKPickerView-Swift'
 end
 
 post_install do |installer|

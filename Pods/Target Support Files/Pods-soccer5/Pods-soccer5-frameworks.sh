@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-soccer5/AKPickerView_Swift.framework"
   install_framework "Pods-soccer5/Alamofire.framework"
   install_framework "Pods-soccer5/AlamofireImage.framework"
   install_framework "Pods-soccer5/Bolts.framework"
@@ -96,6 +97,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-soccer5/SlideMenuControllerSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-soccer5/AKPickerView_Swift.framework"
   install_framework "Pods-soccer5/Alamofire.framework"
   install_framework "Pods-soccer5/AlamofireImage.framework"
   install_framework "Pods-soccer5/Bolts.framework"

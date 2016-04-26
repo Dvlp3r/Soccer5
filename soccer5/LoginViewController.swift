@@ -17,6 +17,12 @@ class LoginViewController: UIViewController {
     var email:String = ""
 
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBAction func dontHaveAnAccountBtn(sender: AnyObject) {
+        performSegueWithIdentifier("toRegisterSegue", sender: self)
+    }
+    @IBAction func signInBtn(sender: AnyObject) {
+    }
     @IBAction func loginWithFacebook(sender: AnyObject) {
         
         
@@ -28,7 +34,7 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            if let url = response?["picture"]?["data"]?["url"] {
+            if let url = response?["picture"]?!["data"]?!["url"] {
                 self.facebookProfileUrl = url as? String
             }
             
@@ -66,55 +72,11 @@ class LoginViewController: UIViewController {
         }
         
     }
-    // UPDATE WHEN API IS READY
-    // -------------------------------------------------------------------------------------------------------
-    //    func initiateRequestToServer() {
-    //        self.getSignLoginAPIParameter {
-    //            (parameter) -> Void in
-    //
-    //            WebService.postAt(APIFbLogin,
-    //                parameters: parameter,
-    //                successBlock: {
-    //                    (response) -> Void in
-    //                    self.indicator.stop()
-    //
-    //                    //Save facebookID in userdefaults as we need to use this id as parameter in next request.
-    //                    var ud = User()
-    //                    ud.userFBID = self.faceBookID
-    //                    ud.userFBFullName = self.fullName
-    //                    ud.userFBProfileURL = self.facebookProfileUrl
-    //
-    //                    guard let response = response as! [String: AnyObject]? else {
-    //                        return
-    //                    }
-    //
-    //                    guard let status = response["success"] as? Bool else {
-    //                        return
-    //
-    //                    }
-    //
-    //                    if status {
-    //                        //IF user location has been extracted to to home view
-    //                        //ELSE show location needed controller
-    //                        if let _ = self.userLocation {
-    //                            self.performSegueWithIdentifier("LoginSegue", sender: nil)
-    //
-    //                        } else {
-    //                            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("NoLocationViewController")
-    //                            self.showViewController(controller!, sender: nil)
-    //                        }
-    //
-    //                    }
-    //
-    //                }, failureBlock: {
-    //                    (message) -> Void in
-    //                    self.indicator.stop()
-    //            })
-    //        }
-    //    }
+
     override func viewDidLoad() {
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("navigateToLocation"), name:"LoginSuccessfull", object:nil)
+        super.viewDidLoad()
+        
     }
     
 
