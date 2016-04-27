@@ -93,8 +93,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-soccer5/FBSDKLoginKit.framework"
   install_framework "Pods-soccer5/FBSDKShareKit.framework"
   install_framework "Pods-soccer5/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-soccer5/KNSemiModalViewController_hons82.framework"
   install_framework "Pods-soccer5/MotionAnimation.framework"
   install_framework "Pods-soccer5/SlideMenuControllerSwift.framework"
+  install_framework "Pods-soccer5/THCalendarDatePicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-soccer5/AKPickerView_Swift.framework"
@@ -106,6 +108,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-soccer5/FBSDKLoginKit.framework"
   install_framework "Pods-soccer5/FBSDKShareKit.framework"
   install_framework "Pods-soccer5/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-soccer5/KNSemiModalViewController_hons82.framework"
   install_framework "Pods-soccer5/MotionAnimation.framework"
   install_framework "Pods-soccer5/SlideMenuControllerSwift.framework"
+  install_framework "Pods-soccer5/THCalendarDatePicker.framework"
 fi

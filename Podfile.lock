@@ -18,8 +18,11 @@ PODS:
   - FBSDKShareKit (4.10.1):
     - FBSDKCoreKit
   - IQKeyboardManagerSwift (4.0.0)
+  - KNSemiModalViewController_hons82 (0.4.4)
   - MotionAnimation (0.0.5)
   - SlideMenuControllerSwift (2.0.6)
+  - THCalendarDatePicker (1.2.7):
+    - KNSemiModalViewController_hons82 (~> 0.4.4)
 
 DEPENDENCIES:
   - AKPickerView-Swift
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - IQKeyboardManagerSwift
   - SlideMenuControllerSwift (~> 2.0.3)
+  - THCalendarDatePicker (~> 1.2.6)
 
 SPEC CHECKSUMS:
   AKPickerView-Swift: 8509d472bb257649383c276506334a7373d3cb33
@@ -43,7 +47,9 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   FBSDKShareKit: 2fd887cce0056bdda91f99b2021d724a4fed8e88
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
+  KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
   SlideMenuControllerSwift: 143343f05b79aef3e2bb4dc72a1dc373ffa66d6c
+  THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
 COCOAPODS: 0.39.0

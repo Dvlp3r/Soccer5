@@ -15,7 +15,6 @@
 		9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862CF1CA99E520075B016 /* FacebookFriend.swift */; };
 		9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D11CA99E870075B016 /* UserInfo.swift */; };
 		9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D41CA9A4530075B016 /* RegisterViewController.swift */; };
-		9EB6A8231CC9654500F67D0F /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */; };
 		9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */; };
 		9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248F1CA46A3C00E68315 /* ViewController.swift */; };
 		9ECC24931CA46A3C00E68315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24911CA46A3C00E68315 /* Main.storyboard */; };
@@ -23,6 +22,7 @@
 		9ECC24981CA46A3C00E68315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24971CA46A3C00E68315 /* Assets.xcassets */; };
 		9ECC249B1CA46A3C00E68315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */; };
 		9ECC24A61CA46A3D00E68315 /* soccer5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */; };
+		9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB2A741CD0079200078467 /* MainReservationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		9E9862CF1CA99E520075B016 /* FacebookFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFriend.swift; sourceTree = "<group>"; };
 		9E9862D11CA99E870075B016 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		9E9862D41CA9A4530075B016 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		9ECC248A1CA46A3C00E68315 /* soccer5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soccer5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECC248F1CA46A3C00E68315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		9ECC24A11CA46A3D00E68315 /* soccer5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soccer5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soccer5Tests.swift; sourceTree = "<group>"; };
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFB2A741CD0079200078467 /* MainReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReservationViewController.swift; sourceTree = "<group>"; };
 		F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +178,7 @@
 		9EB6A8211CC9650F00F67D0F /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
-				9EB6A8221CC9654500F67D0F /* ReservationViewController.swift */,
+				9EFB2A741CD0079200078467 /* MainReservationViewController.swift */,
 			);
 			name = Reservation;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					9ECC24891CA46A3B00E68315 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = GAX93KNMU9;
+						DevelopmentTeam = 8NL99R24EE;
 					};
 					9ECC24A01CA46A3D00E68315 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -389,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */,
@@ -397,7 +398,6 @@
 				9E9862CA1CA989D10075B016 /* UserDefault.swift in Sources */,
 				9E9862C81CA989AD0075B016 /* FacebookSharingHelper.swift in Sources */,
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
-				9EB6A8231CC9654500F67D0F /* ReservationViewController.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
 			);
@@ -527,11 +527,14 @@
 			baseConfigurationReference = 3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -540,11 +543,14 @@
 			baseConfigurationReference = F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -14,6 +14,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'SlideMenuControllerSwift’, ‘~> 2.0.3'
 pod 'ElasticTransition'
 pod 'AKPickerView-Swift'
+pod 'THCalendarDatePicker', '~> 1.2.6'
 end
 
 post_install do |installer|
