@@ -16,7 +16,6 @@
 		9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D11CA99E870075B016 /* UserInfo.swift */; };
 		9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862D41CA9A4530075B016 /* RegisterViewController.swift */; };
 		9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */; };
-		9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC248F1CA46A3C00E68315 /* ViewController.swift */; };
 		9ECC24931CA46A3C00E68315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24911CA46A3C00E68315 /* Main.storyboard */; };
 		9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24941CA46A3C00E68315 /* soccer5.xcdatamodeld */; };
 		9ECC24981CA46A3C00E68315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24971CA46A3C00E68315 /* Assets.xcassets */; };
@@ -48,7 +47,6 @@
 		9E9862D41CA9A4530075B016 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9ECC248A1CA46A3C00E68315 /* soccer5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soccer5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9ECC248F1CA46A3C00E68315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9ECC24921CA46A3C00E68315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ECC24951CA46A3C00E68315 /* soccer5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soccer5.xcdatamodel; sourceTree = "<group>"; };
 		9ECC24971CA46A3C00E68315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				9EB6A8211CC9650F00F67D0F /* Reservation */,
 				9E9862D31CA9A4060075B016 /* Register */,
 				9E9862CB1CA98A830075B016 /* Login */,
-				9ECC248F1CA46A3C00E68315 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -396,7 +393,6 @@
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
-				9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,
 				9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */,
 				9E9862CA1CA989D10075B016 /* UserDefault.swift in Sources */,

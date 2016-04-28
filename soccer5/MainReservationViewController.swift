@@ -12,42 +12,25 @@ import THCalendarDatePicker
 
 class MainReservationViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, THDatePickerDelegate, UIGestureRecognizerDelegate {
     
+    // example
     var listOfReservations = [
         //TODO: populate this dictionary with reservations from backend
         [
-            "User_id": "10y6t7y0",
-            "field": "7v7",
-            "date": "28/04/2016",
-            "time": "10:00 AM",
-            "location": "Soccer 5 Kendall"
+            "User_id": "data",
+            "field": "data",
+            "date": "data",
+            "time": "data",
+            "location": "data"
         ],
-        [
-            "User_id": "9y6t7y0",
-            "field": "8v8",
-            "date": "28/04/2016",
-            "time": "8:00 AM",
-            "location": "Soccer 5 Kendall"
-        ],
-        [
-            "User_id": "10y6t7y0",
-            "field": "7v7",
-            "date": "28/04/2016",
-            "time": "9:00 AM",
-            "location": "Soccer 5 Kendall"
-        ],
-        [
-            "User_id": "10y6t7y0",
-            "field": "8v8",
-            "date": "28/04/2016",
-            "time": "11:00 AM",
-            "location": "Soccer 5 Kendall"
-        ]
+        
     ]
     
     var reservationTime: String = ""
     var reservationDate: String = ""
     var reservationLocation: String = ""
     var reservationField: String = ""
+    var ud = User()
+    
     
     let times = ["6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM"]
     var curDate : NSDate? = NSDate()
@@ -85,8 +68,10 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     @IBAction func indexChanged(sender: UISegmentedControl) {
      
         reservationField = fieldControlOutlet.titleForSegmentAtIndex(fieldControlOutlet.selectedSegmentIndex)!
+        updateFieldsUI()
         updateUIWithReservedFields()
     }
+    
     @IBAction func choseDateBtn(sender: AnyObject) {
         datePicker.date = curDate
         datePicker.setDateHasItemsCallback({(date:NSDate!) -> Bool in
@@ -106,10 +91,15 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default , handler: { action in
             // if user wants to reserve, save fields to reservation model
-            Reservation().time = self.reservationTime
-            Reservation().location = self.reservationLocation
-            Reservation().field = self.reservationField
-            Reservation().date = self.reservationDate
+
+            let reservationDataArr = [
+                "User_id": self.ud.userFBID!,
+                "field": self.reservationField,
+                "date": self.reservationDate,
+                "time": self.reservationTime,
+                "location": self.reservationLocation
+            ]
+            self.listOfReservations.append(reservationDataArr)
             
             // TODO: Implement backend to save reservation
             // present an alert on success
@@ -129,7 +119,10 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateFieldsUI()
         updateUIWithReservedFields()
+        
         // default reservation settings:
         reservationTime = times[0]
         reservationField = fieldControlOutlet.titleForSegmentAtIndex(fieldControlOutlet.selectedSegmentIndex)!
@@ -233,6 +226,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         reservationTime = times[item]
+        updateFieldsUI()
         updateUIWithReservedFields()
     }
     
@@ -257,25 +251,27 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             if reservation["time"]! == reservationTime && reservation["date"]! == reservationDate && reservation["location"]! == reservationLocation && reservation["field"]! == reservationField {
                 fieldImage.image = UIImage(named: "rectangle-booked.png")
                 reservationBtnOutlet.hidden = true
-            } else {
-                switch fieldControlOutlet.selectedSegmentIndex
-                {
-                case 0:
-                    fieldImage.image = UIImage(named: "icon-field-5-5-portrait.png")
-                case 1:
-                    fieldImage.image = UIImage(named: "icon-field-6-6.png")
-                case 2:
-                    fieldImage.image = UIImage(named: "icon-field-7-7.png")
-                case 3:
-                    fieldImage.image = UIImage(named: "icon-field-8-8.png")
-                default:
-                    break; 
-                }
-                reservationBtnOutlet.hidden = false
             }
         }
     }
     
+    func updateFieldsUI() {
+        switch fieldControlOutlet.selectedSegmentIndex
+        {
+            case 0:
+                fieldImage.image = UIImage(named: "icon-field-5-5-portrait.png")
+            case 1:
+                fieldImage.image = UIImage(named: "icon-field-6-6.png")
+            case 2:
+                fieldImage.image = UIImage(named: "icon-field-7-7.png")
+            case 3:
+                fieldImage.image = UIImage(named: "icon-field-8-8.png")
+            default:
+                break;
+        }
+        reservationBtnOutlet.hidden = false
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
