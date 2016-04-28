@@ -23,6 +23,7 @@
 		9ECC249B1CA46A3C00E68315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */; };
 		9ECC24A61CA46A3D00E68315 /* soccer5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */; };
 		9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB2A741CD0079200078467 /* MainReservationViewController.swift */; };
+		9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCE4331CD158D900B9ACC1 /* Reservation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soccer5Tests.swift; sourceTree = "<group>"; };
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EFB2A741CD0079200078467 /* MainReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReservationViewController.swift; sourceTree = "<group>"; };
+		9EFCE4331CD158D900B9ACC1 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 			children = (
 				9E9862CF1CA99E520075B016 /* FacebookFriend.swift */,
 				9E9862D11CA99E870075B016 /* UserInfo.swift */,
+				9EFCE4331CD158D900B9ACC1 /* Reservation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
+				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24901CA46A3C00E68315 /* ViewController.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,

@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon-field-5-5@3x.png",
+      "filename" : "icon-field-5-5-portrait@3x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon-field-5-5@2x.png",
+      "filename" : "icon-field-5-5-portrait@2x.png",
       "scale" : "2x"
     },
     {
