@@ -10,6 +10,7 @@ import UIKit
 import AKPickerView_Swift
 import THCalendarDatePicker
 
+
 class MainReservationViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, THDatePickerDelegate, UIGestureRecognizerDelegate {
     
     // example
@@ -58,11 +59,13 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         return tmpFormatter
     }()
     
+
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var locationOutlet: UILabel!
     @IBOutlet weak var pickerView: AKPickerView!
     @IBOutlet weak var fieldControlOutlet: UISegmentedControl!
     @IBOutlet weak var fieldImage: UIImageView!
-    @IBOutlet weak var selectedDateOutlet: UIButton!
+    @IBOutlet weak var selectedDateOutlet: UIBarButtonItem!
     @IBOutlet weak var reservationBtnOutlet: UIButton!
 
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -72,6 +75,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         updateUIWithReservedFields()
     }
     
+
     @IBAction func choseDateBtn(sender: AnyObject) {
         datePicker.date = curDate
         datePicker.setDateHasItemsCallback({(date:NSDate!) -> Bool in
@@ -87,7 +91,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     }
     
     @IBAction func makeReservationBtn(sender: AnyObject) {
-        let alert = UIAlertController(title: nil, message: "Do you want to reserve \(reservationField) field at \(reservationLocation) at \(reservationTime)?" , preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: nil, message: "Do you want to reserve \(reservationField) field at \(reservationLocation) on \(reservationDate) at \(reservationTime)?" , preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default , handler: { action in
             // if user wants to reserve, save fields to reservation model
@@ -116,13 +120,30 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         
     }
 
+    @IBAction func choseLocationBtn(sender: AnyObject) {
+        performSegueWithIdentifier("ReservationToLocationSegue", sender: self)
+    }
+    
+    // unwind from locations and update the reservation location
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        if(segue.sourceViewController .isKindOfClass(SoccerLocationsViewController))
+        {
+            let controller:SoccerLocationsViewController = segue.sourceViewController as! SoccerLocationsViewController
+            locationOutlet.text = controller.updatedSelection
+            reservationLocation = controller.updatedSelection
+            
+        }
+    }
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateFieldsUI()
         updateUIWithReservedFields()
         
+
         // default reservation settings:
         reservationTime = times[0]
         reservationField = fieldControlOutlet.titleForSegmentAtIndex(fieldControlOutlet.selectedSegmentIndex)!
@@ -130,7 +151,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         reservationLocation = locationOutlet.text!
         
         fieldControlOutlet.exclusiveTouch = true
-        selectedDateOutlet.setTitle((curDate != nil ? formatter.stringFromDate(curDate!) : "No date selected"), forState: UIControlState.Normal)
+        selectedDateOutlet.title = formatter.stringFromDate(curDate!)
         setPickerViewOptions()
         
         var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
@@ -141,10 +162,33 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
         
-
+        
+        menuButton.target = self.revealViewController()
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+       
     }
     
     // updating field selection on swipe gesture
+    func sideMenuWillOpen() {
+        print("sideMenuWillOpen")
+    }
+    
+    func sideMenuWillClose() {
+        print("sideMenuWillClose")
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        print("sideMenuShouldOpenSideMenu")
+        return true
+    }
+    
+    func sideMenuDidClose() {
+        print("sideMenuDidClose")
+    }
+    
+    func sideMenuDidOpen() {
+        print("sideMenuDidOpen")
+    }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         
@@ -186,7 +230,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     }
     
     func refreshTitle() {
-        selectedDateOutlet.setTitle((curDate != nil ? formatter.stringFromDate(curDate!) : "No date selected"), forState: UIControlState.Normal)
+        selectedDateOutlet.title = formatter.stringFromDate(curDate!)
     }
     func datePickerDonePressed(datePicker: THDatePickerViewController!) {
         curDate = datePicker.date
@@ -249,7 +293,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         for reservation in listOfReservations {
             // check to see if all fields match if they do change UI to booked
             if reservation["time"]! == reservationTime && reservation["date"]! == reservationDate && reservation["location"]! == reservationLocation && reservation["field"]! == reservationField {
-                fieldImage.image = UIImage(named: "rectangle-booked.png")
+                fieldImage.image = UIImage(named: "icon-field-booked.png")
                 reservationBtnOutlet.hidden = true
             }
         }

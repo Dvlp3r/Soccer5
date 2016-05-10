@@ -12,6 +12,8 @@ import FBSDKCoreKit
 import FBSDKShareKit
 import FBSDKLoginKit
 import IQKeyboardManagerSwift
+import AWSS3
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         IQKeyboardManager.sharedManager().enable = true
+        
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: AWSRegionType.USEast1, identityPoolId: "us-east-1:c5db69ee-7123-4b34-b84a-cd236a3cf03f")
+        let serviceConfigs = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: credentialProvider)
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = serviceConfigs
+        // nav bar options
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        // Sets shadow (line below the bar) to a blank image
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Sets the translucent background color
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        UINavigationBar.appearance().translucent = true
+        
         // Override point for customization after application launch.
         return true
     }

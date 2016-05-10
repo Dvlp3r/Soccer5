@@ -14,7 +14,9 @@ class LoginViewController: UIViewController {
     var facebookToken:String?
     var facebookProfileUrl:String?
     var fullName:String = ""
+    var firstName: String = ""
     var email:String = ""
+    var dealDict = [String: AnyObject]()
 
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -39,13 +41,18 @@ class LoginViewController: UIViewController {
             }
             
             var fullName = String()
+            var firstName = String()
+            
             if let name = response?["first_name"] {
-                fullName = "\(name)"
+                firstName = "\(name!)"
+                fullName = "\(name!)"
             }
             
             if let lastName = response?["last_name"] {
-                fullName = "\(fullName) \(lastName)"
+                fullName = "\(fullName) \(lastName!)"
             }
+            
+            
             
             if let FBemail = response?["email"] {
                 self.email = "\(FBemail)"
@@ -55,6 +62,7 @@ class LoginViewController: UIViewController {
             self.fullName = fullName
             self.faceBookID = id
             self.facebookToken = token
+            self.firstName = firstName
             
             // if first time loging in with facebook go to location settings else go to main page
             
@@ -63,9 +71,10 @@ class LoginViewController: UIViewController {
             var ud = User()
             ud.userFBID = self.faceBookID
             ud.userFBFullName = self.fullName
+            ud.userFBFirstName = self.firstName
             ud.userFBProfileURL = self.facebookProfileUrl
             ud.userEmail = self.email
-
+            
             
             self.performSegueWithIdentifier("MainView", sender: self)
             //            self.initiateRequestToServer()

@@ -3,6 +3,11 @@ PODS:
   - Alamofire (3.2.1)
   - AlamofireImage (2.3.1):
     - Alamofire (~> 3.2)
+  - AWSCognito (2.4.1):
+    - AWSCore (= 2.4.1)
+  - AWSCore (2.4.1)
+  - AWSS3 (2.4.1):
+    - AWSCore (= 2.4.1)
   - Bolts (1.6.0):
     - Bolts/AppLinks (= 1.6.0)
     - Bolts/Tasks (= 1.6.0)
@@ -11,16 +16,18 @@ PODS:
   - Bolts/Tasks (1.6.0)
   - ElasticTransition (2.2.0):
     - MotionAnimation (~> 0.0.5)
+  - ENSwiftSideMenu (0.1.1)
   - FBSDKCoreKit (4.10.1):
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.10.1):
     - FBSDKCoreKit
   - FBSDKShareKit (4.10.1):
     - FBSDKCoreKit
+  - Firebase (2.5.1)
   - IQKeyboardManagerSwift (4.0.0)
+  - Kingfisher (2.4.0)
   - KNSemiModalViewController_hons82 (0.4.4)
   - MotionAnimation (0.0.5)
-  - SlideMenuControllerSwift (2.0.6)
   - THCalendarDatePicker (1.2.7):
     - KNSemiModalViewController_hons82 (~> 0.4.4)
 
@@ -28,28 +35,38 @@ DEPENDENCIES:
   - AKPickerView-Swift
   - Alamofire (~> 3.2.1)
   - AlamofireImage (~> 2.0)
+  - AWSCognito
+  - AWSCore
+  - AWSS3
   - Bolts
   - ElasticTransition
+  - ENSwiftSideMenu (~> 0.1.1)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Firebase (>= 2.5.1)
   - IQKeyboardManagerSwift
-  - SlideMenuControllerSwift (~> 2.0.3)
+  - Kingfisher (~> 2.3)
   - THCalendarDatePicker (~> 1.2.6)
 
 SPEC CHECKSUMS:
   AKPickerView-Swift: 8509d472bb257649383c276506334a7373d3cb33
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   AlamofireImage: e52336282757bbe1644f075d6cb85f19c891f939
+  AWSCognito: a57173a82505161bd1a9c8cfe393cea9b5b1f6bb
+  AWSCore: 9bfd632f04aaf12053e639d2a9120372844beb0d
+  AWSS3: d7a3a694ffc4010e90b14755b5b9dbf70989c117
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   ElasticTransition: e5cd2b7d42497ba06cd928922690f335ab544a25
+  ENSwiftSideMenu: a934caefbe811e4925f172009349da4a49901307
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   FBSDKShareKit: 2fd887cce0056bdda91f99b2021d724a4fed8e88
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
+  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
   KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
-  SlideMenuControllerSwift: 143343f05b79aef3e2bb4dc72a1dc373ffa66d6c
   THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
 COCOAPODS: 0.39.0

@@ -11,10 +11,19 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'IQKeyboardManagerSwift'
-pod 'SlideMenuControllerSwift’, ‘~> 2.0.3'
+pod 'ENSwiftSideMenu', '~> 0.1.1'
 pod 'ElasticTransition'
 pod 'AKPickerView-Swift'
 pod 'THCalendarDatePicker', '~> 1.2.6'
+pod 'Firebase', '>= 2.5.1'
+
+# AWS related frameworks
+pod 'AWSCore'
+pod 'AWSS3'
+pod 'AWSCognito'
+
+# Image caching
+pod 'Kingfisher', '~> 2.3'
 end
 
 post_install do |installer|

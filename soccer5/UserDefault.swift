@@ -29,6 +29,14 @@ struct User {
         }
     }
     
+    var userFBFirstName:String? {
+        get {
+            return ud.objectForKey("kUserFBFirstName") as? String
+        } set {
+            ud.setObject(newValue, forKey: "kUserFBFirstName")
+        }
+    }
+    
     var userEmail:String? {
         get {
             return ud.objectForKey("kUserEmail") as? String
