@@ -10,6 +10,9 @@ import UIKit
 
 class GameDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBAction func goToGame(sender: AnyObject) {
+        performSegueWithIdentifier("goToGame", sender: self)
+    }
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         if(segue.sourceViewController .isKindOfClass(GameModificationsViewController))
         {

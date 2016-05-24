@@ -101,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-soccer5/KNSemiModalViewController_hons82.framework"
   install_framework "Pods-soccer5/Kingfisher.framework"
   install_framework "Pods-soccer5/MotionAnimation.framework"
+  install_framework "Pods-soccer5/SwiftyJSON.framework"
   install_framework "Pods-soccer5/THCalendarDatePicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -121,5 +122,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-soccer5/KNSemiModalViewController_hons82.framework"
   install_framework "Pods-soccer5/Kingfisher.framework"
   install_framework "Pods-soccer5/MotionAnimation.framework"
+  install_framework "Pods-soccer5/SwiftyJSON.framework"
   install_framework "Pods-soccer5/THCalendarDatePicker.framework"
 fi

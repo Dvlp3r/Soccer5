@@ -15,13 +15,14 @@ class UpcomingGamesViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBAction func reserveGameBtn(sender: AnyObject) {
         let controller = storyboard!.instantiateViewControllerWithIdentifier("Main")
-        self.revealViewController().pushFrontViewController(controller, animated: true)
+        let navCtrl = BaseNavigationController(rootViewController: controller)
+        self.revealViewController().pushFrontViewController(navCtrl, animated: true)
     }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        if(segue.sourceViewController .isKindOfClass(GameDetailsViewController))
+        if(segue.sourceViewController .isKindOfClass(GameViewController))
         {
-            let controller:GameDetailsViewController = segue.sourceViewController as! GameDetailsViewController
+            let controller:GameViewController = segue.sourceViewController as! GameViewController
             // Update game settings
             
         }
@@ -46,7 +47,7 @@ class UpcomingGamesViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("gameDetailSegue", sender: self)
+        performSegueWithIdentifier("goToGameSegue", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

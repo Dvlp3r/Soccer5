@@ -16,6 +16,7 @@ pod 'ElasticTransition'
 pod 'AKPickerView-Swift'
 pod 'THCalendarDatePicker', '~> 1.2.6'
 pod 'Firebase', '>= 2.5.1'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 # AWS related frameworks
 pod 'AWSCore'

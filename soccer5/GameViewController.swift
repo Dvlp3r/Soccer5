@@ -8,28 +8,48 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
+
+    @IBOutlet weak var gameTitle: UIButton!
+    @IBOutlet weak var gameTime: UILabel!
+    @IBOutlet weak var gameDate: UILabel!
+    @IBOutlet weak var gameLocation: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+
+    @IBAction func gameDetailsBtn(sender: AnyObject) {
+        performSegueWithIdentifier("gameDetailsSegue", sender: self)
+    }
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        if(segue.sourceViewController .isKindOfClass(GameDetailsViewController))
+        {
+            let controller:GameDetailsViewController = segue.sourceViewController as! GameDetailsViewController
+            // Update game settings
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let Cell = tableView.dequeueReusableCellWithIdentifier("gamePlayerCell", forIndexPath: indexPath) as! gamePlayerTableViewCell
+        // TODO: Update UI for each row with games mofication Options
+        
+        return Cell
+        
     }
-    */
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
 }

@@ -28,6 +28,7 @@ PODS:
   - Kingfisher (2.4.0)
   - KNSemiModalViewController_hons82 (0.4.4)
   - MotionAnimation (0.0.5)
+  - SwiftyJSON (2.3.2)
   - THCalendarDatePicker (1.2.7):
     - KNSemiModalViewController_hons82 (~> 0.4.4)
 
@@ -47,7 +48,17 @@ DEPENDENCIES:
   - Firebase (>= 2.5.1)
   - IQKeyboardManagerSwift
   - Kingfisher (~> 2.3)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - THCalendarDatePicker (~> 1.2.6)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   AKPickerView-Swift: 8509d472bb257649383c276506334a7373d3cb33
@@ -67,6 +78,7 @@ SPEC CHECKSUMS:
   Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
   KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
 COCOAPODS: 0.39.0

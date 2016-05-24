@@ -10,9 +10,10 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +22,7 @@ class BaseNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 

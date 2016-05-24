@@ -26,7 +26,10 @@
 		9E0E9B6F1CD8157700F1F22D /* MenuListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B6E1CD8157700F1F22D /* MenuListTableViewCell.swift */; };
 		9E0E9B711CD81D4C00F1F22D /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B701CD81D4C00F1F22D /* UserProfileTableViewCell.swift */; };
 		9E0E9B731CD820AA00F1F22D /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B721CD820AA00F1F22D /* Extentions.swift */; };
-		9E0E9B781CD901D000F1F22D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B771CD901D000F1F22D /* SWRevealViewController.m */; };
+		9E3534AB1CEF87980098B0FF /* gamePlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3534AA1CEF87980098B0FF /* gamePlayerTableViewCell.swift */; };
+		9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */; };
+		9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39DC2D1CEFACEE007D7824 /* globals.swift */; };
+		9E39DC301CF39411007D7824 /* CustomFieldLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */; };
 		9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */; };
 		9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */; };
 		9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */; };
@@ -52,6 +55,13 @@
 		9ECC24981CA46A3C00E68315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24971CA46A3C00E68315 /* Assets.xcassets */; };
 		9ECC249B1CA46A3C00E68315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */; };
 		9ECC24A61CA46A3D00E68315 /* soccer5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */; };
+		9EE74D391CEE2E7B00F90DF9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D381CEE2E7B00F90DF9 /* SWRevealViewController.m */; };
+		9EE74D3B1CEE347500F90DF9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3A1CEE347500F90DF9 /* Location.swift */; };
+		9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */; };
+		9EE74D3F1CEE39D300F90DF9 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3E1CEE39D300F90DF9 /* WebService.swift */; };
+		9EE74D441CEE53FB00F90DF9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D431CEE53FB00F90DF9 /* GameViewController.swift */; };
+		9EE74D471CEE6AAC00F90DF9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */; };
+		9EE74D491CEE6ABE00F90DF9 /* GameNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D481CEE6ABE00F90DF9 /* GameNavigationController.swift */; };
 		9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB2A741CD0079200078467 /* MainReservationViewController.swift */; };
 		9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCE4331CD158D900B9ACC1 /* Reservation.swift */; };
 /* End PBXBuildFile section */
@@ -88,8 +98,10 @@
 		9E0E9B701CD81D4C00F1F22D /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9E0E9B721CD820AA00F1F22D /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		9E0E9B751CD901CE00F1F22D /* soccer5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "soccer5-Bridging-Header.h"; sourceTree = "<group>"; };
-		9E0E9B761CD901D000F1F22D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master 2/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		9E0E9B771CD901D000F1F22D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master 2/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		9E3534AA1CEF87980098B0FF /* gamePlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePlayerTableViewCell.swift; sourceTree = "<group>"; };
+		9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E39DC2D1CEFACEE007D7824 /* globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globals.swift; sourceTree = "<group>"; };
+		9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFieldLayout.swift; sourceTree = "<group>"; };
 		9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +131,14 @@
 		9ECC24A11CA46A3D00E68315 /* soccer5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soccer5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soccer5Tests.swift; sourceTree = "<group>"; };
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE74D371CEE2E7B00F90DF9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master 4/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		9EE74D381CEE2E7B00F90DF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master 4/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		9EE74D3A1CEE347500F90DF9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRegisterUser.swift; sourceTree = "<group>"; };
+		9EE74D3E1CEE39D300F90DF9 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		9EE74D431CEE53FB00F90DF9 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		9EE74D481CEE6ABE00F90DF9 /* GameNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNavigationController.swift; sourceTree = "<group>"; };
 		9EFB2A741CD0079200078467 /* MainReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReservationViewController.swift; sourceTree = "<group>"; };
 		9EFCE4331CD158D900B9ACC1 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,11 +214,18 @@
 		9E0E9B741CD901A800F1F22D /* SWRevealView */ = {
 			isa = PBXGroup;
 			children = (
-				9E0E9B761CD901D000F1F22D /* SWRevealViewController.h */,
-				9E0E9B771CD901D000F1F22D /* SWRevealViewController.m */,
+				9EE74D371CEE2E7B00F90DF9 /* SWRevealViewController.h */,
+				9EE74D381CEE2E7B00F90DF9 /* SWRevealViewController.m */,
 				9E0E9B751CD901CE00F1F22D /* soccer5-Bridging-Header.h */,
 			);
 			name = SWRevealView;
+			sourceTree = "<group>";
+		};
+		9E3534AC1CEF90690098B0FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9E5344511CDD38C300D4CB88 /* AWS Operations */ = {
@@ -223,8 +250,8 @@
 			children = (
 				9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */,
 				9E9862C71CA989AD0075B016 /* FacebookSharingHelper.swift */,
-				9E9862C91CA989D10075B016 /* UserDefault.swift */,
 				9E0E9B721CD820AA00F1F22D /* Extentions.swift */,
+				9E39DC2D1CEFACEE007D7824 /* globals.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -232,6 +259,8 @@
 		9E9862BF1CA980630075B016 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */,
+				9EE74D3E1CEE39D300F90DF9 /* WebService.swift */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -247,6 +276,7 @@
 		9E9862C11CA980750075B016 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EE74D451CEE6A8100F90DF9 /* Navigation  */,
 				9EB549BB1CE13A560067D461 /* Notifications */,
 				9EB549AA1CE11F000067D461 /* Upcoming Games */,
 				9E72E7931CDA6EEE001C6D29 /* Profile */,
@@ -262,6 +292,7 @@
 		9E9862C21CA9807D0075B016 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				9E3534AC1CEF90690098B0FF /* Views */,
 				9ECC24911CA46A3C00E68315 /* Main.storyboard */,
 				9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */,
 			);
@@ -299,7 +330,9 @@
 			children = (
 				9E9862CF1CA99E520075B016 /* FacebookFriend.swift */,
 				9E9862D11CA99E870075B016 /* UserInfo.swift */,
+				9E9862C91CA989D10075B016 /* UserDefault.swift */,
 				9EFCE4331CD158D900B9ACC1 /* Reservation.swift */,
+				9EE74D3A1CEE347500F90DF9 /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,6 +348,7 @@
 		9EB549AA1CE11F000067D461 /* Upcoming Games */ = {
 			isa = PBXGroup;
 			children = (
+				9EE74D401CEE53D100F90DF9 /* Game */,
 				9EB549AF1CE124FA0067D461 /* Game Details */,
 				9EB549AB1CE11F2A0067D461 /* UpcomingGamesViewController.swift */,
 				9EB549AD1CE11F750067D461 /* GameTableViewCell.swift */,
@@ -355,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				9EFB2A741CD0079200078467 /* MainReservationViewController.swift */,
+				9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */,
+				9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */,
 			);
 			name = Reservation;
 			sourceTree = "<group>";
@@ -384,12 +420,12 @@
 			children = (
 				9E5344511CDD38C300D4CB88 /* AWS Operations */,
 				9E0E9B531CD3FC8900F1F22D /* AppIcon.appiconset */,
+				9E9862BF1CA980630075B016 /* WebServices */,
 				9E9862CE1CA99E1C0075B016 /* Model */,
 				9E9862C31CA980910075B016 /* Configuration */,
 				9E9862C21CA9807D0075B016 /* Storyboards */,
 				9E9862C11CA980750075B016 /* Controllers */,
 				9E9862C01CA9806C0075B016 /* Styles */,
-				9E9862BF1CA980630075B016 /* WebServices */,
 				9E9862BE1CA980550075B016 /* Helpers */,
 				9ECC24971CA46A3C00E68315 /* Assets.xcassets */,
 			);
@@ -403,6 +439,24 @@
 				9ECC24A71CA46A3D00E68315 /* Info.plist */,
 			);
 			path = soccer5Tests;
+			sourceTree = "<group>";
+		};
+		9EE74D401CEE53D100F90DF9 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				9EE74D431CEE53FB00F90DF9 /* GameViewController.swift */,
+				9E3534AA1CEF87980098B0FF /* gamePlayerTableViewCell.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		9EE74D451CEE6A8100F90DF9 /* Navigation  */ = {
+			isa = PBXGroup;
+			children = (
+				9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */,
+				9EE74D481CEE6ABE00F90DF9 /* GameNavigationController.swift */,
+			);
+			name = "Navigation ";
 			sourceTree = "<group>";
 		};
 		EE5DBC59CFBF90C4F6735B5F /* Frameworks */ = {
@@ -579,12 +633,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE74D3F1CEE39D300F90DF9 /* WebService.swift in Sources */,
 				9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */,
 				9EB549B11CE125150067D461 /* GameDetailsViewController.swift in Sources */,
 				9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */,
 				9EB549AE1CE11F750067D461 /* GameTableViewCell.swift in Sources */,
 				9EB549AC1CE11F2A0067D461 /* UpcomingGamesViewController.swift in Sources */,
+				9EE74D441CEE53FB00F90DF9 /* GameViewController.swift in Sources */,
+				9E39DC301CF39411007D7824 /* CustomFieldLayout.swift in Sources */,
+				9EE74D491CEE6ABE00F90DF9 /* GameNavigationController.swift in Sources */,
 				9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */,
+				9EE74D471CEE6AAC00F90DF9 /* BaseNavigationController.swift in Sources */,
 				9EB549BF1CE13B110067D461 /* NotificationTableViewCell.swift in Sources */,
 				9EB549BA1CE1384B0067D461 /* ChangeDetailTableViewCell.swift in Sources */,
 				9EB549B81CE137D00067D461 /* GameModificationsViewController.swift in Sources */,
@@ -592,9 +651,9 @@
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
 				9E0E9B6D1CD7CBEE00F1F22D /* UserMenuTableViewController.swift in Sources */,
+				9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */,
 				9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */,
 				9EB549B51CE12ED20067D461 /* PlayerCollectionViewCell.swift in Sources */,
-				9E0E9B781CD901D000F1F22D /* SWRevealViewController.m in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,
 				9E9862D51CA9A4530075B016 /* RegisterViewController.swift in Sources */,
@@ -603,10 +662,15 @@
 				9E9862C81CA989AD0075B016 /* FacebookSharingHelper.swift in Sources */,
 				9E0E9B4D1CD29BB500F1F22D /* SoccerLocationsViewController.swift in Sources */,
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
+				9EE74D391CEE2E7B00F90DF9 /* SWRevealViewController.m in Sources */,
 				9EB549B31CE1275B0067D461 /* GameDetailTableViewCell.swift in Sources */,
 				9E0E9B711CD81D4C00F1F22D /* UserProfileTableViewCell.swift in Sources */,
+				9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */,
 				9E0E9B6F1CD8157700F1F22D /* MenuListTableViewCell.swift in Sources */,
 				9EB549BD1CE13A710067D461 /* NotificationsViewController.swift in Sources */,
+				9EE74D3B1CEE347500F90DF9 /* Location.swift in Sources */,
+				9E3534AB1CEF87980098B0FF /* gamePlayerTableViewCell.swift in Sources */,
+				9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
 			);

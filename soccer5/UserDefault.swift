@@ -8,62 +8,89 @@
 
 import Foundation
 struct User {
-    //UserDefault
+
     let ud:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     var userFBID:String? {
         get {
-            return ud.objectForKey("kUserFBID") as? String
+            return ud.objectForKey("UserFBID") as? String
         } set {
-            //Should be saved while user has successfully logged in through facebook SDK.
-            //And logged verified from our server.
-            ud.setObject(newValue, forKey: "kUserFBID")
+            ud.setObject(newValue, forKey: "UserFBID")
         }
     }
     
     var userFBFullName:String? {
         get {
-            return ud.objectForKey("kUserFBName") as? String
+            return ud.objectForKey("UserFBName") as? String
         } set {
-            ud.setObject(newValue, forKey: "kUserFBName")
+            ud.setObject(newValue, forKey: "UserFBName")
         }
     }
     
     var userFBFirstName:String? {
         get {
-            return ud.objectForKey("kUserFBFirstName") as? String
+            return ud.objectForKey("UserFBFirstName") as? String
         } set {
-            ud.setObject(newValue, forKey: "kUserFBFirstName")
+            ud.setObject(newValue, forKey: "UserFBFirstName")
         }
     }
     
     var userEmail:String? {
         get {
-            return ud.objectForKey("kUserEmail") as? String
+            return ud.objectForKey("UserEmail") as? String
         } set {
-            ud.setObject(newValue, forKey: "kUserEmail")
+            ud.setObject(newValue, forKey: "UserEmail")
         }
     }
 
     
     var userFBProfileURL:String? {
         get {
-            return ud.objectForKey("kUserFBProfileURL") as? String
+            return ud.objectForKey("UserFBProfileURL") as? String
         } set {
-            ud.setObject(newValue, forKey: "kUserFBProfileURL")
+            ud.setObject(newValue, forKey: "UserFBProfileURL")
         }
     }
     
     var userFriendsList:[String]? {
         get {
-            return ud.objectForKey("kUserFriendsList") as? [String]
+            return ud.objectForKey("UserFriendsList") as? [String]
         } set {
-            ud.setObject(newValue, forKey: "kUserFriendsList")
+            ud.setObject(newValue, forKey: "UserFriendsList")
         }
     }
     
-
-    
+    var selectedLocation:String? {
+        get {
+            return ud.objectForKey("selectedLocation") as? String
+        } set {
+            ud.setObject(newValue, forKey: "selectedLocation")
+        }
+    }
+//    
+//    var userPhone:String? {
+//        get {
+//            return  ud.objectForKey("UserPhone")
+//        } set {
+//            ud.setObject(newValue, forKey: "UserPhone")
+//        }
+//    }
+//    
+//    var userReservations:[Reservation]? {
+//        get {
+//            return  ud.objectForKey("UserReservations")
+//        } set {
+//            ud.setObject(newValue, forKey: "UserReservations")
+//        }
+//    }
+//    var userInvitedGameReservations:[Reservation]? {
+//        get {
+//            return  ud.objectForKey("UserInvitedGameReservations")
+//        } set {
+//            ud.setObject(newValue, forKey: "UserInvitedGameReservations")
+//        }
+//    }
+//    
     static func saveUserFriendsToUserDefaults() {
         FacebookLoginHelper.friendListOfUser() {
             friends in

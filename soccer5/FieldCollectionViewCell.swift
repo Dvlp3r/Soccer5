@@ -10,4 +10,14 @@ import UIKit
 
 class FieldCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var fieldImage: UIImageView!
+    @IBOutlet weak var fieldType: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+
 }

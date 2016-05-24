@@ -11,8 +11,8 @@ import UIKit
 class SoccerLocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     var soccerLocationsArray = ["Soccer 5 Tropical Park", "Soccer 5 Kendall", "Soccer 5 Hialeah"]
-    var updatedSelection:String = ""
     var searchActive : Bool = false
+    var user = User()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchLocationOutlet: UISearchBar!
@@ -74,19 +74,9 @@ class SoccerLocationsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        updatedSelection = soccerLocationsArray[indexPath.row]
-        self.performSegueWithIdentifier("unwindToMain", sender: self)
+        let controller = storyboard!.instantiateViewControllerWithIdentifier("Main") as! MainReservationViewController
+        user.selectedLocation = soccerLocationsArray[indexPath.row]
+        let navCtrl = BaseNavigationController(rootViewController: controller)
+        self.revealViewController().pushFrontViewController(navCtrl, animated: true)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

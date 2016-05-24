@@ -145,16 +145,19 @@ class UserMenuTableViewController: UITableViewController {
             // TODO Peform segues
             if (indexPath.row == ReserveField){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("Main")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = BaseNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
             }
             else if(indexPath.row == UpcomingGames){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("UpcomingGamesController")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = GameNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
                 
             }
             else if(indexPath.row == Locations){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("locationsController")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = BaseNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
                 
             }
             else if(indexPath.row == MessageCenter){
@@ -170,12 +173,14 @@ class UserMenuTableViewController: UITableViewController {
             }
             else if (indexPath.row == MyProfile){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("ProfileViewNav")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = BaseNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
             }
             
         } else {
             let controller = storyboard!.instantiateViewControllerWithIdentifier("ProfileViewNav")
-            self.revealViewController().pushFrontViewController(controller, animated: true)
+            let navCtrl = BaseNavigationController(rootViewController: controller)
+            self.revealViewController().pushFrontViewController(navCtrl, animated: true)
         }
         
         

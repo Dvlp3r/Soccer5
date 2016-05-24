@@ -7,3 +7,19 @@
 //
 
 import Foundation
+enum FieldType {
+    case Field5v5
+    case Field6v6
+    case Field7v7
+    
+    func stringValue() -> String {
+        switch self {
+        case .Field5v5:
+            return "5v5"
+        case .Field6v6:
+            return "6v6"
+        case .Field7v7:
+            return "7v7"
+        }
+    }
+}

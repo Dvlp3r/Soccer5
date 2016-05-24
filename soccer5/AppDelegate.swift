@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set translucent. (Default value is already true, so this can be removed if desired.)
         UINavigationBar.appearance().translucent = true
         
+
+        
         // Override point for customization after application launch.
         return true
     }

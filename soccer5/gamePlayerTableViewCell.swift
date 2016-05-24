@@ -10,6 +10,8 @@ import UIKit
 
 class gamePlayerTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var playerPic: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

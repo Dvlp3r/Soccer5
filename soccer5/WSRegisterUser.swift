@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import Alamofire
+
+func registerUser() {
+    // TODO: it's better to use NSTemporaryDirectory()
+
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ED6277151D52636B5FA2B8E5E5F87C01C41DB106",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "19A0E3BB8775BDCF572E098DB3FCA0DB53F4C097" : 0,
+    "ED6277151D52636B5FA2B8E5E5F87C01C41DB106" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "32082C3F-D721-481D-B495-D91FA23C4579",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "19A0E3BB8775BDCF572E098DB3FCA0DB53F4C097" : "Radius\/",
+    "ED6277151D52636B5FA2B8E5E5F87C01C41DB106" : "soccer5\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "soccer5",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "soccer5.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/radiuspartners\/Radius-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19A0E3BB8775BDCF572E098DB3FCA0DB53F4C097"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SebastainMisas\/Soccer5.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED6277151D52636B5FA2B8E5E5F87C01C41DB106"
+    }
+  ]
+}
