@@ -39,6 +39,7 @@
 		9ECC24A61CA46A3D00E68315 /* soccer5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */; };
 		9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB2A741CD0079200078467 /* MainReservationViewController.swift */; };
 		9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCE4331CD158D900B9ACC1 /* Reservation.swift */; };
+		ACA92F411CF4A6EF000F8376 /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA92F401CF4A6EE000F8376 /* MyFriendsTableViewCell.swift */; };
 		ACF828DC1CF3BC8D00BC75BD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF828DB1CF3BC8D00BC75BD /* SWRevealViewController.m */; };
 		ACF828E41CF3BE4600BC75BD /* AKPickerView-Swift in Resources */ = {isa = PBXBuildFile; fileRef = ACF828E31CF3BE4600BC75BD /* AKPickerView-Swift */; };
 		ACF8297B1CF3C0FA00BC75BD /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF829711CF3C0FA00BC75BD /* Icon-40@2x.png */; };
@@ -238,6 +239,7 @@
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EFB2A741CD0079200078467 /* MainReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReservationViewController.swift; sourceTree = "<group>"; };
 		9EFCE4331CD158D900B9ACC1 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		ACA92F401CF4A6EE000F8376 /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		ACF828DA1CF3BC4D00BC75BD /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		ACF828DB1CF3BC8D00BC75BD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		ACF828E31CF3BE4600BC75BD /* AKPickerView-Swift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "AKPickerView-Swift"; sourceTree = "<group>"; };
@@ -344,10 +346,10 @@
 		9E72E7931CDA6EEE001C6D29 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				ACF8298B1CF4A6A100BC75BD /* My Friends */,
 				9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */,
 				9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */,
 				9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */,
-				ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -564,6 +566,15 @@
 				ACF829201CF3BF2200BC75BD /* THCalendarDatePicker.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ACF8298B1CF4A6A100BC75BD /* My Friends */ = {
+			isa = PBXGroup;
+			children = (
+				ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */,
+				ACA92F401CF4A6EE000F8376 /* MyFriendsTableViewCell.swift */,
+			);
+			name = "My Friends";
 			sourceTree = "<group>";
 		};
 		EE5DBC59CFBF90C4F6735B5F /* Frameworks */ = {
@@ -892,6 +903,7 @@
 				9EB549B81CE137D00067D461 /* GameModificationsViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
+				ACA92F411CF4A6EF000F8376 /* MyFriendsTableViewCell.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
 				9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */,
 				9EB549B51CE12ED20067D461 /* PlayerCollectionViewCell.swift in Sources */,

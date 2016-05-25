@@ -9,6 +9,7 @@
 import FBSDKCoreKit
 import FBSDKShareKit
 import FBSDKLoginKit
+import Alamofire
 import Foundation
 
 class FacebookLoginHelper {
@@ -63,6 +64,16 @@ class FacebookLoginHelper {
                             let friend = FacebookFriend()
                             friend.fbID = friendDictionary["id"] as? String
                             friend.name = friendDictionary["name"] as? String
+                            if(friend.fbID != nil) {
+                                let imageURL = "https://graph.facebook.com/\(friend.fbID!)/picture"
+                                Alamofire.request(.GET, NSURL(string:imageURL)!)
+                                    .responseImage { response in
+                                        if let image = response.result.value {
+                                            friend.picture = image
+                                        }
+                                }
+                            }
+                            
                             arrayOfFriends.append(friend)
                         }
                         completionHandler(arrayOfFriends)

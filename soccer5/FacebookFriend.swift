@@ -11,4 +11,5 @@ import UIKit
 class FacebookFriend: NSObject {
     var fbID:String?
     var name:String?
+    var picture:UIImage?
 }
