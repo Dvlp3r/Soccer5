@@ -18,6 +18,10 @@
 		9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39DC2D1CEFACEE007D7824 /* globals.swift */; };
 		9E39DC301CF39411007D7824 /* CustomFieldLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */; };
 		9E465AA41CF5FEDE001DCA62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E465AA31CF5FEDE001DCA62 /* Main.storyboard */; };
+		9E465ABC1CF607E7001DCA62 /* MessageCenterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465ABB1CF607E7001DCA62 /* MessageCenterNavigationController.swift */; };
+		9E465ABF1CF608A9001DCA62 /* MessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465ABE1CF608A9001DCA62 /* MessageCenterViewController.swift */; };
+		9E465AC11CF60D8D001DCA62 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465AC01CF60D8D001DCA62 /* ChatRoomViewController.swift */; };
+		9E465AC31CF60F2C001DCA62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E465AC21CF60F2C001DCA62 /* GoogleService-Info.plist */; };
 		9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */; };
 		9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */; };
 		9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */; };
@@ -230,6 +234,10 @@
 		9E39DC2D1CEFACEE007D7824 /* globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globals.swift; sourceTree = "<group>"; };
 		9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFieldLayout.swift; sourceTree = "<group>"; };
 		9E465AA31CF5FEDE001DCA62 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9E465ABB1CF607E7001DCA62 /* MessageCenterNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterNavigationController.swift; sourceTree = "<group>"; };
+		9E465ABE1CF608A9001DCA62 /* MessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterViewController.swift; sourceTree = "<group>"; };
+		9E465AC01CF60D8D001DCA62 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		9E465AC21CF60F2C001DCA62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -333,14 +341,6 @@
 			name = "User Menu";
 			sourceTree = "<group>";
 		};
-		9E0E9B531CD3FC8900F1F22D /* AppIcon.appiconset */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = AppIcon.appiconset;
-			path = "../../../../Downloads/icon 2/ios/AppIcon.appiconset";
-			sourceTree = "<group>";
-		};
 		9E0E9B741CD901A800F1F22D /* SWRevealView */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +356,15 @@
 			children = (
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		9E465ABD1CF60890001DCA62 /* Message Center */ = {
+			isa = PBXGroup;
+			children = (
+				9E465ABE1CF608A9001DCA62 /* MessageCenterViewController.swift */,
+				9E465AC01CF60D8D001DCA62 /* ChatRoomViewController.swift */,
+			);
+			name = "Message Center";
 			sourceTree = "<group>";
 		};
 		9E5344511CDD38C300D4CB88 /* AWS Operations */ = {
@@ -417,6 +426,7 @@
 		9E9862C11CA980750075B016 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E465ABD1CF60890001DCA62 /* Message Center */,
 				9EE74D451CEE6A8100F90DF9 /* Navigation  */,
 				9EB549BB1CE13A560067D461 /* Notifications */,
 				9EB549AA1CE11F000067D461 /* Upcoming Games */,
@@ -445,6 +455,7 @@
 			children = (
 				9E9862C41CA9818A0075B016 /* Core Data */,
 				9ECC249C1CA46A3C00E68315 /* Info.plist */,
+				9E465AC21CF60F2C001DCA62 /* GoogleService-Info.plist */,
 				9ECC248D1CA46A3C00E68315 /* AppDelegate.swift */,
 			);
 			name = Configuration;
@@ -561,7 +572,6 @@
 			children = (
 				ACF828E31CF3BE4600BC75BD /* AKPickerView-Swift */,
 				9E5344511CDD38C300D4CB88 /* AWS Operations */,
-				9E0E9B531CD3FC8900F1F22D /* AppIcon.appiconset */,
 				9E9862BF1CA980630075B016 /* WebServices */,
 				9E9862CE1CA99E1C0075B016 /* Model */,
 				9E9862C31CA980910075B016 /* Configuration */,
@@ -597,6 +607,7 @@
 			children = (
 				9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */,
 				9EE74D481CEE6ABE00F90DF9 /* GameNavigationController.swift */,
+				9E465ABB1CF607E7001DCA62 /* MessageCenterNavigationController.swift */,
 			);
 			name = "Navigation ";
 			sourceTree = "<group>";
@@ -873,6 +884,7 @@
 			files = (
 				ACF8297F1CF3C0FA00BC75BD /* Icon-Small-50.png in Resources */,
 				ACF829801CF3C0FA00BC75BD /* Icon-Small-50@2x.png in Resources */,
+				9E465AC31CF60F2C001DCA62 /* GoogleService-Info.plist in Resources */,
 				9ECC249B1CA46A3C00E68315 /* LaunchScreen.storyboard in Resources */,
 				ACF828E41CF3BE4600BC75BD /* AKPickerView-Swift in Resources */,
 				9ECC24981CA46A3C00E68315 /* Assets.xcassets in Resources */,
@@ -958,6 +970,7 @@
 				9EB549AC1CE11F2A0067D461 /* UpcomingGamesViewController.swift in Sources */,
 				9EE74D441CEE53FB00F90DF9 /* GameViewController.swift in Sources */,
 				9E39DC301CF39411007D7824 /* CustomFieldLayout.swift in Sources */,
+				9E465ABC1CF607E7001DCA62 /* MessageCenterNavigationController.swift in Sources */,
 				9EE74D491CEE6ABE00F90DF9 /* GameNavigationController.swift in Sources */,
 				9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */,
 				9EE74D471CEE6AAC00F90DF9 /* BaseNavigationController.swift in Sources */,
@@ -991,6 +1004,8 @@
 				9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
+				9E465ABF1CF608A9001DCA62 /* MessageCenterViewController.swift in Sources */,
+				9E465AC11CF60D8D001DCA62 /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,7 +1131,7 @@
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer6;
+				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "soccer5/soccer5-Bridging-Header.h";
@@ -1135,7 +1150,7 @@
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer6;
+				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "soccer5/soccer5-Bridging-Header.h";

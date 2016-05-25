@@ -64,11 +64,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -122,6 +117,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1DEE2F731AF8B2D02E5DAFF35B0C123A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>20EE510C33B653D0D39E8015461CA777</key>
 		<dict>
 			<key>primary</key>
@@ -147,6 +147,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>643DD1EC78C2DFC6FC5DF4A731824BA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>787ADFDC43AC596B7714B24B851BD6D0</key>
 		<dict>
 			<key>primary</key>
@@ -167,27 +172,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AC9326D819482593FE118E915409D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9B1023F74787C5883C2D1D659FC16CD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C10B1E5A01246A76E1525A58C4E2643E</key>
+		<key>ABDA309474785DDE12574547D93EC2F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D8470470292BC39EE263E6103508E41A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCE543B15DDE5A0EA2A1E58691D4616B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

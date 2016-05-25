@@ -13,7 +13,7 @@ import FBSDKShareKit
 import FBSDKLoginKit
 import IQKeyboardManagerSwift
 import AWSS3
-
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         IQKeyboardManager.sharedManager().enable = true
-        
+        FIRApp.configure()
         let credentialProvider = AWSCognitoCredentialsProvider(regionType: AWSRegionType.USEast1, identityPoolId: "us-east-1:c5db69ee-7123-4b34-b84a-cd236a3cf03f")
         let serviceConfigs = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: credentialProvider)
         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = serviceConfigs

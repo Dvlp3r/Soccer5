@@ -591,6 +591,144 @@
             </objects>
             <point key="canvasLocation" x="1101" y="2220"/>
         </scene>
+        <!--Message Center Navigation Controller-->
+        <scene sceneID="3ZU-zt-wA5">
+            <objects>
+                <navigationController id="lQS-AL-22E" customClass="MessageCenterNavigationController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aTN-FH-Wdi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iqA-9s-jyK" kind="relationship" relationship="rootViewController" id="72g-A1-Od1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVF-Pz-fqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="3907"/>
+        </scene>
+        <!--Message Friends-->
+        <scene sceneID="khx-OG-B4T">
+            <objects>
+                <viewController id="iqA-9s-jyK" customClass="MessageCenterViewController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hpJ-2n-abD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tft-ja-SHU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJR-Ss-ASa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-screens" translatesAutoresizingMaskIntoConstraints="NO" id="eii-ng-F2m">
+                                <rect key="frame" x="0.0" y="7" width="320" height="561"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-vn-bQo">
+                                <rect key="frame" x="55" y="88" width="211" height="29"/>
+                                <segments>
+                                    <segment title="Direct"/>
+                                    <segment title="Group"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-qx-NZG">
+                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iqA-9s-jyK" id="yYm-IN-Ss9"/>
+                                    <outlet property="delegate" destination="iqA-9s-jyK" id="YuF-lC-J25"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LE4-vn-bQo" firstAttribute="leading" secondItem="jJR-Ss-ASa" secondAttribute="leadingMargin" constant="39" id="6fv-Fq-JO0"/>
+                            <constraint firstItem="eii-ng-F2m" firstAttribute="bottom" secondItem="Tft-ja-SHU" secondAttribute="top" id="EOj-WI-tu5"/>
+                            <constraint firstItem="LE4-vn-bQo" firstAttribute="top" secondItem="hpJ-2n-abD" secondAttribute="bottom" constant="24" id="Kzi-Oe-XaR"/>
+                            <constraint firstAttribute="trailing" secondItem="eii-ng-F2m" secondAttribute="trailing" id="PqD-Yv-Owa"/>
+                            <constraint firstItem="ZDH-qx-NZG" firstAttribute="top" secondItem="LE4-vn-bQo" secondAttribute="bottom" constant="8" symbolic="YES" id="TsT-Au-CtZ"/>
+                            <constraint firstItem="eii-ng-F2m" firstAttribute="leading" secondItem="ZDH-qx-NZG" secondAttribute="leading" id="WTi-xS-EdO"/>
+                            <constraint firstItem="ZDH-qx-NZG" firstAttribute="bottom" secondItem="Tft-ja-SHU" secondAttribute="top" id="Zix-up-btQ"/>
+                            <constraint firstItem="LE4-vn-bQo" firstAttribute="centerX" secondItem="ZDH-qx-NZG" secondAttribute="centerX" id="aIc-9J-krf"/>
+                            <constraint firstItem="eii-ng-F2m" firstAttribute="top" secondItem="jJR-Ss-ASa" secondAttribute="topMargin" constant="7" id="dNB-tI-kQn"/>
+                            <constraint firstItem="eii-ng-F2m" firstAttribute="leading" secondItem="jJR-Ss-ASa" secondAttribute="leading" id="szf-Uz-WOx"/>
+                            <constraint firstItem="eii-ng-F2m" firstAttribute="trailing" secondItem="ZDH-qx-NZG" secondAttribute="trailing" id="wj3-q8-Bx7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Message Friends" id="2ru-yN-VEF">
+                        <barButtonItem key="leftBarButtonItem" image="icon-menu " id="SNU-99-frq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon-add-people" id="Vam-Y7-46t">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addFriendsBtn:" destination="iqA-9s-jyK" id="wPP-bE-A6A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="SNU-99-frq" id="JHd-OB-1wx"/>
+                        <outlet property="segmentedControl" destination="LE4-vn-bQo" id="c72-TW-ucr"/>
+                        <outlet property="tableView" destination="ZDH-qx-NZG" id="NPd-zH-QrE"/>
+                        <segue destination="SI7-zn-EwB" kind="push" id="fke-r7-4MN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUT-bX-RMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="3917"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="Z0B-3E-OUC">
+            <objects>
+                <viewController id="SI7-zn-EwB" customClass="ChatRoomViewController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n7L-ZG-S2x"/>
+                        <viewControllerLayoutGuide type="bottom" id="jha-51-NTg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e3f-m3-ZvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-screens" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-Ip-VzN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-Xj-7C3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eJ-FG-TPC">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9eJ-FG-TPC" firstAttribute="bottom" secondItem="jha-51-NTg" secondAttribute="top" id="2Tg-nV-UrK"/>
+                            <constraint firstItem="NHp-Ip-VzN" firstAttribute="leading" secondItem="e3f-m3-ZvZ" secondAttribute="leading" id="2rY-MB-Jdh"/>
+                            <constraint firstItem="I3G-Xj-7C3" firstAttribute="trailing" secondItem="9eJ-FG-TPC" secondAttribute="trailing" id="7bD-BK-3DR"/>
+                            <constraint firstItem="I3G-Xj-7C3" firstAttribute="leading" secondItem="9eJ-FG-TPC" secondAttribute="leading" id="Jne-b6-HxV"/>
+                            <constraint firstItem="NHp-Ip-VzN" firstAttribute="bottom" secondItem="jha-51-NTg" secondAttribute="top" id="KBl-lH-2iF"/>
+                            <constraint firstAttribute="trailing" secondItem="NHp-Ip-VzN" secondAttribute="trailing" id="eqh-De-nUd"/>
+                            <constraint firstItem="NHp-Ip-VzN" firstAttribute="leading" secondItem="9eJ-FG-TPC" secondAttribute="leading" id="m5F-wq-AKc"/>
+                            <constraint firstItem="NHp-Ip-VzN" firstAttribute="trailing" secondItem="9eJ-FG-TPC" secondAttribute="trailing" id="rYF-1h-Aj7"/>
+                            <constraint firstItem="NHp-Ip-VzN" firstAttribute="top" secondItem="e3f-m3-ZvZ" secondAttribute="top" id="tK2-yJ-ATu"/>
+                            <constraint firstItem="9eJ-FG-TPC" firstAttribute="top" secondItem="I3G-Xj-7C3" secondAttribute="bottom" constant="8" symbolic="YES" id="xhU-CW-PDe"/>
+                            <constraint firstItem="I3G-Xj-7C3" firstAttribute="top" secondItem="n7L-ZG-S2x" secondAttribute="bottom" id="zdc-EM-L1H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T39-6F-qUF">
+                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="MGP-vp-Wyx">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon-settings" id="Z2d-k8-tsO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAz-Ub-yhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="3918"/>
+        </scene>
         <!--Game Navigation Controller-->
         <scene sceneID="WWJ-Vp-Y5K">
             <objects>
@@ -1139,7 +1277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7B-rV-ovh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="2551"/>
+            <point key="canvasLocation" x="-43" y="3891"/>
         </scene>
         <!--Game Settings-->
         <scene sceneID="Bfy-Ym-72C">
@@ -1671,6 +1809,7 @@
         <image name="btn-sign-in" width="275" height="49"/>
         <image name="con-field-big" width="286" height="550"/>
         <image name="icon-add-navbar" width="21" height="20"/>
+        <image name="icon-add-people" width="31" height="25"/>
         <image name="icon-arrow-forward" width="23" height="45"/>
         <image name="icon-back" width="10" height="19"/>
         <image name="icon-chat" width="26" height="28"/>
