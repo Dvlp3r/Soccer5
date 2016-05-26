@@ -129,7 +129,7 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         let mutableContacts = curContacts.mutableCopy()
         for contact in contactsArr {
             if(curContacts.containsObject(contact) == false) {
-                curContacts.addObject(contact)
+                //curContacts.addObject(contact)
             }
         }
             
