@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09B61E8DB21F287A846067EC /* Pods_soccer5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */; };
 		9E0E9B4D1CD29BB500F1F22D /* SoccerLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B4C1CD29BB500F1F22D /* SoccerLocationsViewController.swift */; };
 		9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B4E1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift */; };
 		9E0E9B6F1CD8157700F1F22D /* MenuListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B6E1CD8157700F1F22D /* MenuListTableViewCell.swift */; };
@@ -65,144 +64,9 @@
 			remoteGlobalIDString = 9ECC24891CA46A3B00E68315;
 			remoteInfo = soccer5;
 		};
-		ACF828FB1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CD3D41E84F59ADA2EA412C299B5428A;
-			remoteInfo = "AKPickerView-Swift";
-		};
-		ACF828FD1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 12D84E1D766FD3CE9C8D54A36CA53E60;
-			remoteInfo = Alamofire;
-		};
-		ACF828FF1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 495608FDDE6CBA3AFF615E0059FE6907;
-			remoteInfo = AlamofireImage;
-		};
-		ACF829011CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C521AC2C9315710AAB491F7C9FDDE0ED;
-			remoteInfo = AWSCognito;
-		};
-		ACF829031CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E674CBA9FC261E6F175CF8A6D18D9418;
-			remoteInfo = AWSCore;
-		};
-		ACF829051CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 13B86D1DF9AA4934B05DD275E9CBC150;
-			remoteInfo = AWSS3;
-		};
-		ACF829071CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 79215D9B3EE05E9F151814E4FD22F13E;
-			remoteInfo = Bolts;
-		};
-		ACF829091CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6B41D9253FD98F0554C1F596502A631D;
-			remoteInfo = ElasticTransition;
-		};
-		ACF8290B1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FD94A35C2C2A6261E6CBD24F9BE83DD;
-			remoteInfo = ENSwiftSideMenu;
-		};
-		ACF8290D1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FE72E072A1375EEB893A44BF753F26A;
-			remoteInfo = FBSDKCoreKit;
-		};
-		ACF8290F1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC910C1826DC9F1CA26AE42D419BAE17;
-			remoteInfo = FBSDKLoginKit;
-		};
-		ACF829111CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 80DA5F3F9614EB407271102250F5D8D1;
-			remoteInfo = FBSDKShareKit;
-		};
-		ACF829131CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0E1FADC69BEC24A336E7B7F041B58D8C;
-			remoteInfo = Firebase;
-		};
-		ACF829151CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56AEFF8C6ECC2CC065BB4681CE7099ED;
-			remoteInfo = IQKeyboardManagerSwift;
-		};
-		ACF829171CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2164A9387B2B5BCED0557551CA5B9365;
-			remoteInfo = Kingfisher;
-		};
-		ACF829191CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A01375981CEF0C654A5587C8011C700D;
-			remoteInfo = KNSemiModalViewController_hons82;
-		};
-		ACF8291B1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB11E2468D061D18F4636E9ED54989DB;
-			remoteInfo = MotionAnimation;
-		};
-		ACF8291D1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A6A687F6621415B3418576CA8F656949;
-			remoteInfo = "Pods-soccer5";
-		};
-		ACF8291F1CF3BF2200BC75BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5490CDF91CCD5502AEFCF740BF86B418;
-			remoteInfo = THCalendarDatePicker;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.debug.xcconfig"; sourceTree = "<group>"; };
-		93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_soccer5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0E9B4C1CD29BB500F1F22D /* SoccerLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerLocationsViewController.swift; sourceTree = "<group>"; };
 		9E0E9B4E1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerLocationTableViewCell.swift; sourceTree = "<group>"; };
 		9E0E9B6E1CD8157700F1F22D /* MenuListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,7 +107,6 @@
 		ACF828DA1CF3BC4D00BC75BD /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		ACF828DB1CF3BC8D00BC75BD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		ACF828E31CF3BE4600BC75BD /* AKPickerView-Swift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "AKPickerView-Swift"; sourceTree = "<group>"; };
-		ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		ACF829711CF3C0FA00BC75BD /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		ACF829721CF3C0FA00BC75BD /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
 		ACF829731CF3C0FA00BC75BD /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -257,7 +120,6 @@
 		ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		ACF829871CF3C20E00BC75BD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ACF829891CF3C29D00BC75BD /* UserMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuTableViewController.swift; sourceTree = "<group>"; };
-		F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09B61E8DB21F287A846067EC /* Pods_soccer5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,16 +140,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31D001A345947F1307455214 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */,
-				3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */,
-				F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9E0E9B4B1CD29B5000F1F22D /* Locations */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,8 +352,6 @@
 				9ECC248C1CA46A3C00E68315 /* soccer5 */,
 				9ECC24A41CA46A3D00E68315 /* soccer5Tests */,
 				9ECC248B1CA46A3C00E68315 /* Products */,
-				31D001A345947F1307455214 /* Pods */,
-				EE5DBC59CFBF90C4F6735B5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -542,32 +391,6 @@
 			path = soccer5Tests;
 			sourceTree = "<group>";
 		};
-		ACF828E61CF3BF2100BC75BD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ACF828FC1CF3BF2200BC75BD /* AKPickerView_Swift.framework */,
-				ACF828FE1CF3BF2200BC75BD /* Alamofire.framework */,
-				ACF829001CF3BF2200BC75BD /* AlamofireImage.framework */,
-				ACF829021CF3BF2200BC75BD /* AWSCognito.framework */,
-				ACF829041CF3BF2200BC75BD /* AWSCore.framework */,
-				ACF829061CF3BF2200BC75BD /* AWSS3.framework */,
-				ACF829081CF3BF2200BC75BD /* Bolts.framework */,
-				ACF8290A1CF3BF2200BC75BD /* ElasticTransition.framework */,
-				ACF8290C1CF3BF2200BC75BD /* ENSwiftSideMenu.framework */,
-				ACF8290E1CF3BF2200BC75BD /* FBSDKCoreKit.framework */,
-				ACF829101CF3BF2200BC75BD /* FBSDKLoginKit.framework */,
-				ACF829121CF3BF2200BC75BD /* FBSDKShareKit.framework */,
-				ACF829141CF3BF2200BC75BD /* Firebase.framework */,
-				ACF829161CF3BF2200BC75BD /* IQKeyboardManagerSwift.framework */,
-				ACF829181CF3BF2200BC75BD /* Kingfisher.framework */,
-				ACF8291A1CF3BF2200BC75BD /* KNSemiModalViewController_hons82.framework */,
-				ACF8291C1CF3BF2200BC75BD /* MotionAnimation.framework */,
-				ACF8291E1CF3BF2200BC75BD /* Pods_soccer5.framework */,
-				ACF829201CF3BF2200BC75BD /* THCalendarDatePicker.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		ACF8298B1CF4A6A100BC75BD /* My Friends */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,14 +400,6 @@
 			name = "My Friends";
 			sourceTree = "<group>";
 		};
-		EE5DBC59CFBF90C4F6735B5F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				93E8887F80C9A2F7DAC21518 /* Pods_soccer5.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -592,12 +407,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ECC24AA1CA46A3D00E68315 /* Build configuration list for PBXNativeTarget "soccer5" */;
 			buildPhases = (
-				95D3DEA110D1D42BB35A8026 /* Check Pods Manifest.lock */,
 				9ECC24861CA46A3B00E68315 /* Sources */,
 				9ECC24871CA46A3B00E68315 /* Frameworks */,
 				9ECC24881CA46A3B00E68315 /* Resources */,
-				DF6049151347B44EE3672B27 /* Embed Pods Frameworks */,
-				19F062AC4923C97730635236 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -658,12 +470,6 @@
 			mainGroup = 9ECC24811CA46A3B00E68315;
 			productRefGroup = 9ECC248B1CA46A3C00E68315 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ACF828E61CF3BF2100BC75BD /* Products */;
-					ProjectRef = ACF828E51CF3BF2100BC75BD /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9ECC24891CA46A3B00E68315 /* soccer5 */,
@@ -671,142 +477,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		ACF828FC1CF3BF2200BC75BD /* AKPickerView_Swift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AKPickerView_Swift.framework;
-			remoteRef = ACF828FB1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF828FE1CF3BF2200BC75BD /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = ACF828FD1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829001CF3BF2200BC75BD /* AlamofireImage.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AlamofireImage.framework;
-			remoteRef = ACF828FF1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829021CF3BF2200BC75BD /* AWSCognito.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AWSCognito.framework;
-			remoteRef = ACF829011CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829041CF3BF2200BC75BD /* AWSCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AWSCore.framework;
-			remoteRef = ACF829031CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829061CF3BF2200BC75BD /* AWSS3.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AWSS3.framework;
-			remoteRef = ACF829051CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829081CF3BF2200BC75BD /* Bolts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Bolts.framework;
-			remoteRef = ACF829071CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8290A1CF3BF2200BC75BD /* ElasticTransition.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ElasticTransition.framework;
-			remoteRef = ACF829091CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8290C1CF3BF2200BC75BD /* ENSwiftSideMenu.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ENSwiftSideMenu.framework;
-			remoteRef = ACF8290B1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8290E1CF3BF2200BC75BD /* FBSDKCoreKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FBSDKCoreKit.framework;
-			remoteRef = ACF8290D1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829101CF3BF2200BC75BD /* FBSDKLoginKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FBSDKLoginKit.framework;
-			remoteRef = ACF8290F1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829121CF3BF2200BC75BD /* FBSDKShareKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FBSDKShareKit.framework;
-			remoteRef = ACF829111CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829141CF3BF2200BC75BD /* Firebase.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Firebase.framework;
-			remoteRef = ACF829131CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829161CF3BF2200BC75BD /* IQKeyboardManagerSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = IQKeyboardManagerSwift.framework;
-			remoteRef = ACF829151CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829181CF3BF2200BC75BD /* Kingfisher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Kingfisher.framework;
-			remoteRef = ACF829171CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8291A1CF3BF2200BC75BD /* KNSemiModalViewController_hons82.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KNSemiModalViewController_hons82.framework;
-			remoteRef = ACF829191CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8291C1CF3BF2200BC75BD /* MotionAnimation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MotionAnimation.framework;
-			remoteRef = ACF8291B1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF8291E1CF3BF2200BC75BD /* Pods_soccer5.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_soccer5.framework;
-			remoteRef = ACF8291D1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACF829201CF3BF2200BC75BD /* THCalendarDatePicker.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = THCalendarDatePicker.framework;
-			remoteRef = ACF8291F1CF3BF2200BC75BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9ECC24881CA46A3B00E68315 /* Resources */ = {
@@ -838,54 +508,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		19F062AC4923C97730635236 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soccer5/Pods-soccer5-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95D3DEA110D1D42BB35A8026 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DF6049151347B44EE3672B27 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soccer5/Pods-soccer5-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9ECC24861CA46A3B00E68315 /* Sources */ = {
@@ -1040,7 +662,6 @@
 		};
 		9ECC24AB1CA46A3D00E68315 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F0D242505C638DD05CCF4A5 /* Pods-soccer5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1059,7 +680,6 @@
 		};
 		9ECC24AC1CA46A3D00E68315 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0E63028EB6BEC3088366B20 /* Pods-soccer5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.performSegueWithIdentifier("MainView", sender: self)
+        //self.performSegueWithIdentifier("MainView", sender: self)
     }
     
 

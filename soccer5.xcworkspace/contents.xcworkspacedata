@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:soccer5.xcodeproj">
+      location = "container:soccer5.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:../../Soccer5/soccer5/Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
