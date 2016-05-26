@@ -605,12 +605,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVF-Pz-fqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="3907"/>
+            <point key="canvasLocation" x="582" y="3247"/>
         </scene>
         <!--Message Friends-->
         <scene sceneID="khx-OG-B4T">
             <objects>
-                <viewController id="iqA-9s-jyK" customClass="MessageCenterViewController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="messageCenter" id="iqA-9s-jyK" customClass="MessageCenterViewController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpJ-2n-abD"/>
                         <viewControllerLayoutGuide type="bottom" id="Tft-ja-SHU"/>
@@ -632,7 +632,18 @@
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-qx-NZG">
                                 <rect key="frame" x="0.0" y="124" width="320" height="444"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConversationPreviewCell" id="kUe-kZ-qTN" customClass="ConversationPreviewTableViewCell" customModule="soccer5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kUe-kZ-qTN" id="P6x-R8-kA0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="iqA-9s-jyK" id="yYm-IN-Ss9"/>
                                     <outlet property="delegate" destination="iqA-9s-jyK" id="YuF-lC-J25"/>
@@ -661,20 +672,20 @@
                         <barButtonItem key="rightBarButtonItem" image="icon-add-people" id="Vam-Y7-46t">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="addFriendsBtn:" destination="iqA-9s-jyK" id="wPP-bE-A6A"/>
+                                <action selector="addFriends:" destination="iqA-9s-jyK" id="0he-Cp-bqO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="SNU-99-frq" id="JHd-OB-1wx"/>
-                        <outlet property="segmentedControl" destination="LE4-vn-bQo" id="c72-TW-ucr"/>
-                        <outlet property="tableView" destination="ZDH-qx-NZG" id="NPd-zH-QrE"/>
-                        <segue destination="SI7-zn-EwB" kind="push" id="fke-r7-4MN"/>
+                        <outlet property="menuButton" destination="SNU-99-frq" id="UnW-G4-kQD"/>
+                        <outlet property="segmentedControl" destination="LE4-vn-bQo" id="IGy-L0-PVy"/>
+                        <outlet property="tableView" destination="ZDH-qx-NZG" id="qGE-fd-8RW"/>
+                        <segue destination="SI7-zn-EwB" kind="push" identifier="chatRoomSegue" id="7b2-0s-HiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUT-bX-RMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="3917"/>
+            <point key="canvasLocation" x="976" y="3247"/>
         </scene>
         <!--Chat Room View Controller-->
         <scene sceneID="Z0B-3E-OUC">
@@ -691,25 +702,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-screens" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-Ip-VzN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-Xj-7C3">
-                                <rect key="frame" x="0.0" y="64" width="320" height="466"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eJ-FG-TPC">
                                 <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-JQ-PzL">
+                                <rect key="frame" x="274" y="538" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="RlQ-nm-gDM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="send"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-Xj-7C3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="466"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatMessageCell" rowHeight="68" id="brV-U7-Lrr" customClass="ChatMessageTableViewCell" customModule="soccer5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="brV-U7-Lrr" id="dGS-uY-MgV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SI7-zn-EwB" id="d1A-a1-nLT"/>
+                                    <outlet property="delegate" destination="SI7-zn-EwB" id="Z7K-ju-QfU"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9eJ-FG-TPC" firstAttribute="bottom" secondItem="jha-51-NTg" secondAttribute="top" id="2Tg-nV-UrK"/>
                             <constraint firstItem="NHp-Ip-VzN" firstAttribute="leading" secondItem="e3f-m3-ZvZ" secondAttribute="leading" id="2rY-MB-Jdh"/>
+                            <constraint firstItem="emG-JQ-PzL" firstAttribute="trailing" secondItem="9eJ-FG-TPC" secondAttribute="trailing" id="5KS-rB-UDp"/>
                             <constraint firstItem="I3G-Xj-7C3" firstAttribute="trailing" secondItem="9eJ-FG-TPC" secondAttribute="trailing" id="7bD-BK-3DR"/>
                             <constraint firstItem="I3G-Xj-7C3" firstAttribute="leading" secondItem="9eJ-FG-TPC" secondAttribute="leading" id="Jne-b6-HxV"/>
                             <constraint firstItem="NHp-Ip-VzN" firstAttribute="bottom" secondItem="jha-51-NTg" secondAttribute="top" id="KBl-lH-2iF"/>
                             <constraint firstAttribute="trailing" secondItem="NHp-Ip-VzN" secondAttribute="trailing" id="eqh-De-nUd"/>
                             <constraint firstItem="NHp-Ip-VzN" firstAttribute="leading" secondItem="9eJ-FG-TPC" secondAttribute="leading" id="m5F-wq-AKc"/>
+                            <constraint firstItem="emG-JQ-PzL" firstAttribute="top" secondItem="9eJ-FG-TPC" secondAttribute="top" id="mDs-ni-Qp2"/>
                             <constraint firstItem="NHp-Ip-VzN" firstAttribute="trailing" secondItem="9eJ-FG-TPC" secondAttribute="trailing" id="rYF-1h-Aj7"/>
                             <constraint firstItem="NHp-Ip-VzN" firstAttribute="top" secondItem="e3f-m3-ZvZ" secondAttribute="top" id="tK2-yJ-ATu"/>
                             <constraint firstItem="9eJ-FG-TPC" firstAttribute="top" secondItem="I3G-Xj-7C3" secondAttribute="bottom" constant="8" symbolic="YES" id="xhU-CW-PDe"/>
@@ -724,10 +761,14 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="messageTextField" destination="9eJ-FG-TPC" id="zsD-wt-GUm"/>
+                        <outlet property="tableView" destination="I3G-Xj-7C3" id="Lhh-v4-AVQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAz-Ub-yhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="3918"/>
+            <point key="canvasLocation" x="1373" y="3247"/>
         </scene>
         <!--Game Navigation Controller-->
         <scene sceneID="WWJ-Vp-Y5K">
@@ -1277,7 +1318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7B-rV-ovh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="3891"/>
+            <point key="canvasLocation" x="582" y="3901"/>
         </scene>
         <!--Game Settings-->
         <scene sceneID="Bfy-Ym-72C">
@@ -1558,7 +1599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENi-GK-qvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-890" y="1852"/>
+            <point key="canvasLocation" x="186" y="3901"/>
         </scene>
         <!--Profile-->
         <scene sceneID="EKg-fe-Z7E">
@@ -1796,7 +1837,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jO9-EF-0Sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323" y="2542"/>
+            <point key="canvasLocation" x="-295" y="2586"/>
         </scene>
     </scenes>
     <resources>

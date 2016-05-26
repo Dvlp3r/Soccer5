@@ -161,7 +161,9 @@ class UserMenuTableViewController: UITableViewController {
                 
             }
             else if(indexPath.row == MessageCenter){
-                
+                let controller = storyboard!.instantiateViewControllerWithIdentifier("messageCenter")
+                let navCtrl = MessageCenterNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
             }
             else if (indexPath.row == Notifications){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("notificationController")

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct User {
 
     let ud:NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -16,6 +17,20 @@ struct User {
             return ud.objectForKey("UserFBID") as? String
         } set {
             ud.setObject(newValue, forKey: "UserFBID")
+        }
+    }
+    var userID:String? {
+        get {
+            return ud.objectForKey("UserID") as? String
+        } set {
+            ud.setObject(newValue, forKey: "UserID")
+        }
+    }
+    var userName:String? {
+        get {
+            return ud.objectForKey("UserName") as? String
+        } set {
+            ud.setObject(newValue, forKey: "UserName")
         }
     }
     

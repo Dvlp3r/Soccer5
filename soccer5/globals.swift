@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FBSDKLoginKit
+
 enum FieldType {
     case Field5v5
     case Field6v6
@@ -22,4 +24,19 @@ enum FieldType {
             return "7v7"
         }
     }
+}
+
+func isAFacbookUser() -> Bool{
+    if FBSDKAccessToken.currentAccessToken() == nil {
+        return false
+    } else{
+        return true
+    }
+    
+}
+
+struct ChatMessage {
+    var name: String!
+    var message: String!
+    var image: UIImage?
 }
