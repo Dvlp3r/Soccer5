@@ -16,6 +16,7 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     var allContacts: NSArray!
     var allFriends: NSArray!
     @IBOutlet weak var contactsTableView: UITableView!
+    @IBOutlet weak var friendsTableView: UITableView!
     @IBOutlet weak var inviteView: UIView!
     var indexInfo: NSMutableArray!
     var contactCells: NSMutableArray!
@@ -24,6 +25,8 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        contactsTableView.hidden = true
         
         let inviteTapGesture = UITapGestureRecognizer(target: self, action: #selector(MyFriendsViewController.invitePeople))
         inviteView.addGestureRecognizer(inviteTapGesture)
@@ -49,6 +52,21 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
             self.contactsTableView.reloadData()
         
         })
+    }
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            contactsTableView.hidden = true
+            friendsTableView.hidden = false
+            break
+        case 1:
+            contactsTableView.hidden = false
+            friendsTableView.hidden = true
+            break
+        default:
+            break
+        }
     }
     
     func setUpIndexes() {
@@ -108,11 +126,13 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
                 let index = contact.objectForKey("index") as! Int
                 if(type == "facebook") {
                     let curFriend = allFriends.objectAtIndex(index) as! FacebookFriend
-                    contactInfo.setObject(curFriend, forKey: "contact")
+                    let curFriendName = curFriend.name!
+                    contactInfo.setObject(curFriendName, forKey: "contact")
                     contactInfo.setObject("facebook", forKey: "type")
                 } else if(type == "contact") {
                     let curContact = allContacts.objectAtIndex(index)
-                    contactInfo.setObject(curContact, forKey: "contact")
+                    let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue() as! String
+                    contactInfo.setObject(curContactName, forKey: "contact")
                     contactInfo.setObject("contact", forKey: "type")
                 }
                 contactsArr.addObject(contactInfo)
@@ -127,13 +147,23 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         let mutableContacts = curContacts.mutableCopy()
-        for contact in contactsArr {
-            if(curContacts.containsObject(contact) == false) {
-                //curContacts.addObject(contact)
+        for newContact in contactsArr as! [NSMutableDictionary] {
+            let newName = newContact.objectForKey("contact") as! String
+            var exists = false
+            for oldContact in mutableContacts as! [NSMutableDictionary] {
+                let oldName = oldContact.objectForKey("contact") as! String
+                print(newName + " " + oldName)
+                if(newName == oldName) {
+                    exists = true
+                    break
+                }
+            }
+            if(exists != true) {
+                mutableContacts.addObject(newContact)
             }
         }
-            
-        defaults.setObject(curContacts, forKey: "friends")
+        print(mutableContacts)
+        defaults.setObject(mutableContacts, forKey: "friends")
         defaults.synchronize()
     }
     
@@ -171,55 +201,75 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var total = 0
-        if(allContacts != nil){
-            total += allContacts.count
+        if(tableView == contactsTableView) {
+            var total = 0
+            if(allContacts != nil){
+                total += allContacts.count
+            }
+            if(allFriends != nil) {
+                total += allFriends.count
+            }
+            return total
+        } else if(tableView == friendsTableView) {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            guard let friends = defaults.objectForKey("friends") as? NSArray else {
+                return 0
+            }
+            return friends.count
         }
-        if(allFriends != nil) {
-            total += allFriends.count
-        }
-        return total
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let contactCell: MyFriendsTableViewCell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as! MyFriendsTableViewCell
         
-        if(indexInfo.count != 0) {
-            let curDict = indexInfo.objectAtIndex(indexPath.row) as! NSMutableDictionary
-            
-            let index = curDict.objectForKey("index") as! Int
-            let type = curDict.objectForKey("type") as! String
-            let hidden = !(curDict.objectForKey("shouldInvite") as! Bool)
-            let imageView = UIImageView(frame: CGRect(x: 15, y: 5, width: contactCell.frame.size.height - 10, height: contactCell.frame.size.height - 10))
-            contactCell.check.hidden = hidden
-            if(type == "contact") {
-                let curContact = allContacts.objectAtIndex(index)
-                let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue() as String
-                let image =  ABPersonCopyImageDataWithFormat(curContact, kABPersonImageFormatThumbnail)
-                if(image != nil) {
-                    contactCell.icon.image = UIImage(data: image.takeRetainedValue())
-                    contactCell.icon.layer.cornerRadius = contactCell.icon.frame.size.width / 2
-                    contactCell.icon.clipsToBounds = true
-                } else {
-                    contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
+        if(tableView == contactsTableView) {
+            if(indexInfo.count != 0) {
+                let curDict = indexInfo.objectAtIndex(indexPath.row) as! NSMutableDictionary
+                
+                let index = curDict.objectForKey("index") as! Int
+                let type = curDict.objectForKey("type") as! String
+                let hidden = !(curDict.objectForKey("shouldInvite") as! Bool)
+                let imageView = UIImageView(frame: CGRect(x: 15, y: 5, width: contactCell.frame.size.height - 10, height: contactCell.frame.size.height - 10))
+                contactCell.check.hidden = hidden
+                if(type == "contact") {
+                    let curContact = allContacts.objectAtIndex(index)
+                    let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue() as String
+                    let image =  ABPersonCopyImageDataWithFormat(curContact, kABPersonImageFormatThumbnail)
+                    if(image != nil) {
+                        contactCell.icon.image = UIImage(data: image.takeRetainedValue())
+                        contactCell.icon.layer.cornerRadius = contactCell.icon.frame.size.width / 2
+                        contactCell.icon.clipsToBounds = true
+                    } else {
+                        contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
+                    }
+                    contactCell.contentView.addSubview(imageView)
+                    contactCell.label.text = curContactName
+                } else if(type == "facebook") {
+                    let curFriend = allFriends.objectAtIndex(index) as! FacebookFriend
+                    let curFriendName = curFriend.name
+                    if(curFriend.picture != nil) {
+                        contactCell.icon.image = curFriend.picture
+                        contactCell.icon.layer.cornerRadius = contactCell.icon.frame.size.width / 2
+                        contactCell.icon.clipsToBounds = true
+                    } else {
+                        contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
+                    }
+                    contactCell.contentView.addSubview(imageView)
+                    contactCell.label.text = curFriendName
                 }
-                contactCell.contentView.addSubview(imageView)
-                contactCell.label.text = curContactName
-            } else if(type == "facebook") {
-                let curFriend = allFriends.objectAtIndex(index) as! FacebookFriend
-                let curFriendName = curFriend.name
-                if(curFriend.picture != nil) {
-                    contactCell.icon.image = curFriend.picture
-                    contactCell.icon.layer.cornerRadius = contactCell.icon.frame.size.width / 2
-                    contactCell.icon.clipsToBounds = true
-                } else {
-                    contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
-                }
-                contactCell.contentView.addSubview(imageView)
-                contactCell.label.text = curFriendName
+                
+                contactCell.label.textColor = UIColor.whiteColor()
             }
-            
-            contactCell.label.textColor = UIColor.whiteColor()
+        } else if(tableView == friendsTableView) {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            guard let friends = defaults.objectForKey("friends") as? NSArray else {
+                return contactCell
+            }
+            print(friends)
+            let curFriend = friends.objectAtIndex(indexPath.row) as! NSMutableDictionary
+            contactCell.label.text = curFriend.objectForKey("contact") as! String
+            contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
         }
         
         return contactCell

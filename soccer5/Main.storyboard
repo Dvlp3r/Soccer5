@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -978,7 +978,52 @@
                                     <segment title="My Contacts"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="eNB-vd-61L" eventType="valueChanged" id="rgz-FA-AiK"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-N3-5op" userLabel="Friends Table View">
+                                <rect key="frame" x="0.0" y="63" width="320" height="443"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="contactCell" id="JyQ-Nh-TEY" customClass="MyFriendsTableViewCell" customModule="soccer5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JyQ-Nh-TEY" id="Ibp-AL-4VH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uva-6j-3mG">
+                                                    <rect key="frame" x="75" y="17" width="218" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="218" id="meN-0M-Ioi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-tick" translatesAutoresizingMaskIntoConstraints="NO" id="Ot2-IZ-FGB">
+                                                    <rect key="frame" x="282" y="19" width="30" height="25"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOb-MR-QRW">
+                                                    <rect key="frame" x="17" y="5" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="check" destination="Ot2-IZ-FGB" id="jT0-53-hKJ"/>
+                                            <outlet property="icon" destination="nOb-MR-QRW" id="SxH-Pd-apk"/>
+                                            <outlet property="label" destination="Uva-6j-3mG" id="Beb-uX-Lzi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eNB-vd-61L" id="1H2-V7-jvY"/>
+                                    <outlet property="delegate" destination="eNB-vd-61L" id="vQs-81-IDP"/>
+                                </connections>
+                            </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-5K-bL7">
                                 <rect key="frame" x="0.0" y="125" width="320" height="443"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1046,20 +1091,25 @@
                             <constraint firstItem="dkp-Jb-XRy" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leadingMargin" id="5jS-Nc-jf6"/>
                             <constraint firstItem="bgq-3z-bAP" firstAttribute="top" secondItem="lV4-na-EHb" secondAttribute="topMargin" id="Cl7-QV-TAm"/>
                             <constraint firstItem="Kor-5K-bL7" firstAttribute="top" secondItem="Q7h-Tm-MFs" secondAttribute="bottom" constant="15" id="DQo-ro-HyO"/>
+                            <constraint firstItem="TkA-jV-tTf" firstAttribute="top" secondItem="MmB-N3-5op" secondAttribute="bottom" constant="50" id="HQL-Lz-9QH"/>
                             <constraint firstItem="bgq-3z-bAP" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leadingMargin" id="I5E-23-fTu"/>
                             <constraint firstItem="TkA-jV-tTf" firstAttribute="top" secondItem="paC-BB-040" secondAttribute="bottom" id="LPU-UV-6bu"/>
                             <constraint firstItem="paC-BB-040" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leading" id="P3q-65-3iE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bgq-3z-bAP" secondAttribute="trailing" id="QeL-8z-SFK"/>
+                            <constraint firstItem="MmB-N3-5op" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leading" id="Yhz-KC-hGQ"/>
                             <constraint firstItem="Kor-5K-bL7" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leading" id="bAq-tZ-umd"/>
-                            <constraint firstItem="TkA-jV-tTf" firstAttribute="top" secondItem="Kor-5K-bL7" secondAttribute="bottom" id="dDN-fa-67d"/>
+                            <constraint firstItem="TkA-jV-tTf" firstAttribute="top" secondItem="Kor-5K-bL7" secondAttribute="bottom" constant="50" id="dDN-fa-67d"/>
+                            <constraint firstItem="MmB-N3-5op" firstAttribute="top" secondItem="Q7h-Tm-MFs" secondAttribute="bottom" constant="15" id="eUM-Ug-KHd"/>
                             <constraint firstAttribute="trailing" secondItem="paC-BB-040" secondAttribute="trailing" id="fN6-vU-anR"/>
                             <constraint firstItem="TkA-jV-tTf" firstAttribute="top" secondItem="bgq-3z-bAP" secondAttribute="bottom" id="iz6-WM-EyS"/>
                             <constraint firstItem="Q7h-Tm-MFs" firstAttribute="leading" secondItem="lV4-na-EHb" secondAttribute="leadingMargin" constant="48" id="kxQ-IB-aQj"/>
                             <constraint firstAttribute="trailing" secondItem="Kor-5K-bL7" secondAttribute="trailing" id="mhT-gk-3kr"/>
+                            <constraint firstAttribute="trailing" secondItem="MmB-N3-5op" secondAttribute="trailing" id="w0P-Qt-4uM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contactsTableView" destination="Kor-5K-bL7" id="UAi-9o-VeQ"/>
+                        <outlet property="friendsTableView" destination="MmB-N3-5op" id="jRI-dS-v8w"/>
                         <outlet property="inviteView" destination="paC-BB-040" id="uRJ-Tb-VVW"/>
                         <outlet property="segmentedControl" destination="Q7h-Tm-MFs" id="vGX-Fc-aPW"/>
                     </connections>
