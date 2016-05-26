@@ -152,7 +152,6 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
             var exists = false
             for oldContact in mutableContacts as! [NSMutableDictionary] {
                 let oldName = oldContact.objectForKey("contact") as! String
-                print(newName + " " + oldName)
                 if(newName == oldName) {
                     exists = true
                     break
