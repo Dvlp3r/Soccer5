@@ -15,6 +15,7 @@
 		9E0E9B711CD81D4C00F1F22D /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B701CD81D4C00F1F22D /* UserProfileTableViewCell.swift */; };
 		9E0E9B731CD820AA00F1F22D /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B721CD820AA00F1F22D /* Extentions.swift */; };
 		9E2BEC341CF7822E0031D0E3 /* MessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BEC331CF7822E0031D0E3 /* MessageCenterViewController.swift */; };
+		9E2BEC771CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BEC761CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift */; };
 		9E3534AB1CEF87980098B0FF /* gamePlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3534AA1CEF87980098B0FF /* gamePlayerTableViewCell.swift */; };
 		9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */; };
 		9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39DC2D1CEFACEE007D7824 /* globals.swift */; };
@@ -224,6 +225,7 @@
 		9E0E9B721CD820AA00F1F22D /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		9E0E9B751CD901CE00F1F22D /* soccer5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "soccer5-Bridging-Header.h"; sourceTree = "<group>"; };
 		9E2BEC331CF7822E0031D0E3 /* MessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterViewController.swift; sourceTree = "<group>"; };
+		9E2BEC761CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		9E3534AA1CEF87980098B0FF /* gamePlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePlayerTableViewCell.swift; sourceTree = "<group>"; };
 		9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E39DC2D1CEFACEE007D7824 /* globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globals.swift; sourceTree = "<group>"; };
@@ -351,6 +353,15 @@
 			name = SWRevealView;
 			sourceTree = "<group>";
 		};
+		9E2BEC611CF7BE170031D0E3 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				9E2BEC761CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift */,
+				ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
 		9E3534AC1CEF90690098B0FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +386,6 @@
 				9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */,
 				9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */,
 				9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */,
-				ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -411,6 +421,7 @@
 		9E9862C11CA980750075B016 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E2BEC611CF7BE170031D0E3 /* Friends */,
 				9E465ABD1CF60890001DCA62 /* Message Center */,
 				9EE74D451CEE6A8100F90DF9 /* Navigation  */,
 				9EB549BB1CE13A560067D461 /* Notifications */,
@@ -994,6 +1005,7 @@
 				9EB549BA1CE1384B0067D461 /* ChangeDetailTableViewCell.swift in Sources */,
 				9EB549B81CE137D00067D461 /* GameModificationsViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
+				9E2BEC771CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
 				9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */,
