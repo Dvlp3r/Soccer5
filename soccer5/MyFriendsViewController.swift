@@ -11,6 +11,7 @@ import AddressBook
 
 class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     let addressBookRef: ABAddressBook = ABAddressBookCreateWithOptions(nil, nil).takeRetainedValue()
     var allContacts: NSArray!
@@ -23,6 +24,8 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuButton.target = self.revealViewController()
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         

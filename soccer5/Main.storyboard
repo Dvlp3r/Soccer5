@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -973,6 +973,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="yQt-O2-xMB" kind="push" id="kz4-8n-yQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nz-2n-SNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="h3X-ne-Y8z" userLabel="Exit" sceneMemberID="exit"/>
@@ -1756,7 +1759,7 @@
             </objects>
             <point key="canvasLocation" x="-295" y="2586"/>
         </scene>
-        <!--My Friends View Controller-->
+        <!--My Friends-->
         <scene sceneID="sgu-3s-E0T">
             <objects>
                 <viewController storyboardIdentifier="MyFriendsController" id="yQt-O2-xMB" customClass="MyFriendsViewController" customModule="soccer5" customModuleProvider="target" sceneMemberID="viewController">
@@ -1771,20 +1774,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg-screens" translatesAutoresizingMaskIntoConstraints="NO" id="Ibj-Ns-1IU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-5a-sFi">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Invite Friends" id="Ajn-58-ede">
-                                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="Pnc-BE-9rj">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OVy-SE-ob1">
                                 <rect key="frame" x="64" y="89" width="191" height="29"/>
                                 <segments>
@@ -1910,27 +1899,31 @@
                             <constraint firstItem="Ibj-Ns-1IU" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leadingMargin" id="RZ9-IZ-AXp"/>
                             <constraint firstItem="IAY-69-VLJ" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="SdX-HB-T1B"/>
                             <constraint firstItem="IAY-69-VLJ" firstAttribute="top" secondItem="OVy-SE-ob1" secondAttribute="bottom" constant="15" id="aid-b3-TNx"/>
-                            <constraint firstItem="G5M-5a-sFi" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leadingMargin" id="akV-iF-Pzr"/>
                             <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="IAY-69-VLJ" secondAttribute="bottom" constant="50" id="cFj-Sc-iOY"/>
                             <constraint firstItem="AbT-T2-CAS" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="gBh-E7-NhA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OVy-SE-ob1" secondAttribute="trailing" constant="48" id="iNM-cs-bVU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G5M-5a-sFi" secondAttribute="trailing" id="ojC-z2-bAd"/>
                             <constraint firstAttribute="trailing" secondItem="AbT-T2-CAS" secondAttribute="trailing" id="tO4-6P-lG2"/>
                             <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="Ibj-Ns-1IU" secondAttribute="bottom" id="uu0-JE-0Xk"/>
                             <constraint firstItem="xo1-LF-rbt" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="vDQ-eC-2iY"/>
                             <constraint firstAttribute="trailing" secondItem="xo1-LF-rbt" secondAttribute="trailing" id="x4i-50-dBt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Friends" id="KEj-8f-Lau">
+                        <barButtonItem key="leftBarButtonItem" image="icon-menu " id="wEy-OK-vTe">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactsTableView" destination="IAY-69-VLJ" id="VsL-9d-XBU"/>
                         <outlet property="friendsTableView" destination="xo1-LF-rbt" id="IvK-Pc-Q4M"/>
                         <outlet property="inviteView" destination="AbT-T2-CAS" id="P0s-1g-2fA"/>
+                        <outlet property="menuButton" destination="wEy-OK-vTe" id="obl-cR-4vc"/>
                         <outlet property="segmentedControl" destination="OVy-SE-ob1" id="rIj-Cx-rHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0t-Wz-XeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="3901"/>
+            <point key="canvasLocation" x="2298" y="2213"/>
         </scene>
     </scenes>
     <resources>

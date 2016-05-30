@@ -27,6 +27,7 @@
 		9E465ADE1CF64479001DCA62 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465ADD1CF64479001DCA62 /* ChatMessageTableViewCell.swift */; };
 		9E465AE01CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465ADF1CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift */; };
 		9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */; };
+		9E54F2201CFCCBC9006BCE97 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */; };
 		9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */; };
 		9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */; };
 		9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */; };
@@ -237,6 +238,7 @@
 		9E465ADD1CF64479001DCA62 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		9E465ADF1CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPreviewTableViewCell.swift; sourceTree = "<group>"; };
 		9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
@@ -372,10 +374,10 @@
 		9E465ABD1CF60890001DCA62 /* Message Center */ = {
 			isa = PBXGroup;
 			children = (
+				9E2BEC331CF7822E0031D0E3 /* MessageCenterViewController.swift */,
 				9E465AC01CF60D8D001DCA62 /* ChatRoomViewController.swift */,
 				9E465ADD1CF64479001DCA62 /* ChatMessageTableViewCell.swift */,
 				9E465ADF1CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift */,
-				9E2BEC331CF7822E0031D0E3 /* MessageCenterViewController.swift */,
 			);
 			name = "Message Center";
 			sourceTree = "<group>";
@@ -406,6 +408,7 @@
 			children = (
 				9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */,
 				9EE74D3E1CEE39D300F90DF9 /* WebService.swift */,
+				9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -998,6 +1001,7 @@
 				9E39DC301CF39411007D7824 /* CustomFieldLayout.swift in Sources */,
 				9E465ABC1CF607E7001DCA62 /* MessageCenterNavigationController.swift in Sources */,
 				9EE74D491CEE6ABE00F90DF9 /* GameNavigationController.swift in Sources */,
+				9E54F2201CFCCBC9006BCE97 /* Firebase.swift in Sources */,
 				9E2BEC341CF7822E0031D0E3 /* MessageCenterViewController.swift in Sources */,
 				9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */,
 				9EE74D471CEE6AAC00F90DF9 /* BaseNavigationController.swift in Sources */,

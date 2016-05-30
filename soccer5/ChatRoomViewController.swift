@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import Photos
 
-class ChatRoomViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class ChatRoomViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
