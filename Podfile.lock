@@ -3,11 +3,6 @@ PODS:
   - Alamofire (3.2.1)
   - AlamofireImage (2.3.1):
     - Alamofire (~> 3.2)
-  - AWSCognito (2.4.2):
-    - AWSCore (= 2.4.2)
-  - AWSCore (2.4.2)
-  - AWSS3 (2.4.2):
-    - AWSCore (= 2.4.2)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
     - Bolts/Tasks (= 1.7.0)
@@ -76,9 +71,6 @@ DEPENDENCIES:
   - AKPickerView-Swift
   - Alamofire (~> 3.2.1)
   - AlamofireImage (~> 2.0)
-  - AWSCognito
-  - AWSCore
-  - AWSS3
   - Bolts
   - ElasticTransition
   - ENSwiftSideMenu (~> 0.1.1)
@@ -107,9 +99,6 @@ SPEC CHECKSUMS:
   AKPickerView-Swift: 8509d472bb257649383c276506334a7373d3cb33
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   AlamofireImage: e52336282757bbe1644f075d6cb85f19c891f939
-  AWSCognito: 87cf3dadb17eed732c1c3fe21624fa8f15ef84ec
-  AWSCore: 08cc4318682a518ad73e452900336ba54e823e03
-  AWSS3: 21bbd5d41eb175bf2fd371dc8af5339752f7f5b7
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   ElasticTransition: 231e60fa66f68f42129e7969736f4a9e69794f97
   ENSwiftSideMenu: a934caefbe811e4925f172009349da4a49901307
@@ -134,6 +123,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
-PODFILE CHECKSUM: a1f9278ff4a78188046dd648958e8ad564701d7b
+PODFILE CHECKSUM: 9135ab2aa4cc43bba6ff15ec8fc41d7317ea9d99
 
 COCOAPODS: 1.0.0

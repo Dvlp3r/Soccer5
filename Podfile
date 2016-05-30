@@ -21,10 +21,6 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
-# AWS related frameworks
-pod 'AWSCore'
-pod 'AWSS3'
-pod 'AWSCognito'
 
 # Image caching
 pod 'Kingfisher', '~> 2.3'

@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="378"/>
+            <point key="canvasLocation" x="122" y="342"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="DCQ-vW-Ytz">
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJv-eR-wfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="386"/>
+            <point key="canvasLocation" x="501" y="350"/>
         </scene>
         <!--Reservation-->
         <scene sceneID="wRO-SZ-2OS">
@@ -450,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMf-Vz-WF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="1832"/>
+            <point key="canvasLocation" x="98" y="1946"/>
         </scene>
         <!--Upcoming Games-->
         <scene sceneID="5vh-SS-99Z">
@@ -1238,7 +1238,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxb-LJ-zEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Pg-1u-nMb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="93" y="2586"/>
+            <point key="canvasLocation" x="98" y="2700"/>
         </scene>
         <!--Game Settings-->
         <scene sceneID="Bfy-Ym-72C">
@@ -1441,7 +1441,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xse-x3-LmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="1832"/>
+            <point key="canvasLocation" x="-323" y="1946"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="AdD-l5-ctG">
@@ -1464,7 +1464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A8-xs-0iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.5" y="1091.5"/>
+            <point key="canvasLocation" x="526.5" y="1141.5"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="4Rp-MJ-odj">
@@ -1757,7 +1757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jO9-EF-0Sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="2586"/>
+            <point key="canvasLocation" x="-290" y="2700"/>
         </scene>
         <!--My Friends-->
         <scene sceneID="sgu-3s-E0T">
@@ -1831,6 +1831,24 @@
                                 <rect key="frame" x="0.0" y="125" width="320" height="443"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="AbT-T2-CAS">
+                                    <rect key="frame" x="0.0" y="88" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="INVITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9q-Qh-UUR">
+                                            <rect key="frame" x="95" y="14" width="131" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.054901960780000002" green="0.55294117649999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="g9q-Qh-UUR" secondAttribute="trailing" constant="25" id="UhS-kB-i9x"/>
+                                        <constraint firstItem="g9q-Qh-UUR" firstAttribute="leading" secondItem="AbT-T2-CAS" secondAttribute="leading" constant="25" id="p9e-Zf-US8"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="contactCell" id="nqI-lH-ahe" customClass="MyFriendsTableViewCell" customModule="soccer5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="60"/>
@@ -1869,29 +1887,11 @@
                                     <outlet property="delegate" destination="yQt-O2-xMB" id="kKa-fC-jSd"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbT-T2-CAS">
-                                <rect key="frame" x="0.0" y="259" width="320" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="INVITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9q-Qh-UUR">
-                                        <rect key="frame" x="99" y="15" width="131" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.054901960780000002" green="0.55294117649999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="g9q-Qh-UUR" secondAttribute="trailing" constant="25" id="UhS-kB-i9x"/>
-                                    <constraint firstItem="g9q-Qh-UUR" firstAttribute="leading" secondItem="AbT-T2-CAS" secondAttribute="leading" constant="25" id="p9e-Zf-US8"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xo1-LF-rbt" firstAttribute="top" secondItem="OVy-SE-ob1" secondAttribute="bottom" constant="15" id="0t3-Dj-NbY"/>
                             <constraint firstItem="OVy-SE-ob1" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leadingMargin" constant="48" id="2Z2-ON-w0C"/>
-                            <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="AbT-T2-CAS" secondAttribute="bottom" id="5nC-eV-Sox"/>
                             <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="xo1-LF-rbt" secondAttribute="bottom" constant="50" id="6Ek-TK-4LQ"/>
                             <constraint firstItem="Ibj-Ns-1IU" firstAttribute="top" secondItem="MaH-g0-AmW" secondAttribute="topMargin" id="8FS-9n-kX4"/>
                             <constraint firstAttribute="trailing" secondItem="IAY-69-VLJ" secondAttribute="trailing" id="PVN-tj-Cbc"/>
@@ -1900,9 +1900,7 @@
                             <constraint firstItem="IAY-69-VLJ" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="SdX-HB-T1B"/>
                             <constraint firstItem="IAY-69-VLJ" firstAttribute="top" secondItem="OVy-SE-ob1" secondAttribute="bottom" constant="15" id="aid-b3-TNx"/>
                             <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="IAY-69-VLJ" secondAttribute="bottom" constant="50" id="cFj-Sc-iOY"/>
-                            <constraint firstItem="AbT-T2-CAS" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="gBh-E7-NhA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OVy-SE-ob1" secondAttribute="trailing" constant="48" id="iNM-cs-bVU"/>
-                            <constraint firstAttribute="trailing" secondItem="AbT-T2-CAS" secondAttribute="trailing" id="tO4-6P-lG2"/>
                             <constraint firstItem="4VL-F2-n6H" firstAttribute="top" secondItem="Ibj-Ns-1IU" secondAttribute="bottom" id="uu0-JE-0Xk"/>
                             <constraint firstItem="xo1-LF-rbt" firstAttribute="leading" secondItem="MaH-g0-AmW" secondAttribute="leading" id="vDQ-eC-2iY"/>
                             <constraint firstAttribute="trailing" secondItem="xo1-LF-rbt" secondAttribute="trailing" id="x4i-50-dBt"/>

@@ -19,7 +19,7 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var contactsTableView: UITableView!
     @IBOutlet weak var friendsTableView: UITableView!
     @IBOutlet weak var inviteView: UIView!
-    var indexInfo: NSMutableArray!
+    var indexInfo = [[String:AnyObject]]()
     var contactCells: NSMutableArray!
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         inviteView.addGestureRecognizer(inviteTapGesture)
         
         let authorizationStatus = ABAddressBookGetAuthorizationStatus()
-        indexInfo = NSMutableArray()
+        
         switch authorizationStatus {
         case .Denied, .Restricted:
             displayCantAddContactAlert()
@@ -79,16 +79,14 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         var curFriendIdx = 0
         var curContactIdx = 0
         while(curFriendIdx < allFriends.count || curContactIdx < allContacts.count) {
-            let curDict: NSMutableDictionary = NSMutableDictionary()
+            var curDict = [String: AnyObject]()
             if(allContacts == nil || curContactIdx >= allContacts.count) {
-                curDict.setObject(curFriendIdx, forKey: "index")
-                curDict.setObject("facebook", forKey: "type")
-                curDict.setObject(false, forKey: "shouldInvite")
+                curDict["index"] = curFriendIdx
+                curDict["type"] = "facebook"
                 curFriendIdx += 1
             } else if(allFriends == nil || curFriendIdx >= allFriends.count) {
-                curDict.setObject(curContactIdx, forKey: "index")
-                curDict.setObject("contact", forKey: "type")
-                curDict.setObject(false, forKey: "shouldInvite")
+                curDict["index"] = curContactIdx
+                curDict["type"] = "contact"
                 curContactIdx += 1
             } else {
                 let curFriend = allFriends.objectAtIndex(curFriendIdx) as! FacebookFriend
@@ -97,18 +95,18 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
                 let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue() as String
                 
                 if(curFriendName > curContactName) {
-                    curDict.setObject(curContactIdx, forKey: "index")
-                    curDict.setObject("contact", forKey: "type")
-                    curDict.setObject(false, forKey: "shouldInvite")
+                    curDict["index"] = curContactIdx
+                    curDict["type"] = "contact"
                     curContactIdx += 1
                 } else {
-                    curDict.setObject(curFriendIdx, forKey: "index")
-                    curDict.setObject("facebook", forKey: "type")
-                    curDict.setObject(false, forKey: "shouldInvite")
+                    curDict["index"] = curFriendIdx
+                    curDict["type"] = "facebook"
                     curFriendIdx += 1
                 }
             }
-            indexInfo.addObject(curDict)
+            
+            curDict["shouldInvite"] = false
+            indexInfo.append(curDict)
         }
     }
     
@@ -121,39 +119,40 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func invitePeople() {
-        let contactsArr = NSMutableArray()
-        for contact in indexInfo as NSArray as! [NSDictionary] {
-            if(contact.objectForKey("shouldInvite") as! Bool == true) {
-                let contactInfo = NSMutableDictionary()
-                let type = contact.objectForKey("type") as! String
-                let index = contact.objectForKey("index") as! Int
-                if(type == "facebook") {
+        var contactsArr = [[String: AnyObject]]()
+        for contact in indexInfo {
+            if contact["shouldInvite"] as! Bool == true {
+                var contactInfo = [String: AnyObject]()
+                let type = contact["type"] as! String
+                let index = contact["index"] as! Int
+                
+                if type == "facebook"  {
                     let curFriend = allFriends.objectAtIndex(index) as! FacebookFriend
                     let curFriendName = curFriend.name!
-                    contactInfo.setObject(curFriendName, forKey: "contact")
-                    contactInfo.setObject("facebook", forKey: "type")
-                } else if(type == "contact") {
+                    contactInfo["contact"] = curFriendName
+                    contactInfo["type"] = "facebook"
+                } else if type == "contact" {
                     let curContact = allContacts.objectAtIndex(index)
-                    let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue() as! String
-                    contactInfo.setObject(curContactName, forKey: "contact")
-                    contactInfo.setObject("contact", forKey: "type")
+                    let curContactName = ABRecordCopyCompositeName(curContact).takeRetainedValue()
+                    contactInfo["contact"] = curContactName
+                    contactInfo["type"] = "contact"
                 }
-                contactsArr.addObject(contactInfo)
+                contactsArr.append(contactInfo)
             }
         }
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        guard let curContacts: NSArray = defaults.arrayForKey("friends") else {
+        guard var curContacts = defaults.arrayForKey("friends") else {
             defaults.setValue(contactsArr, forKey: "friends")
-            
             defaults.synchronize()
             return
         }
-        let mutableContacts = curContacts.mutableCopy()
-        for newContact in contactsArr as! [NSMutableDictionary] {
-            let newName = newContact.objectForKey("contact") as! String
+        
+        for newContact in contactsArr {
+            let newName = newContact["contact"] as! String
             var exists = false
-            for oldContact in mutableContacts as! [NSMutableDictionary] {
+            
+            for oldContact in curContacts {
                 let oldName = oldContact.objectForKey("contact") as! String
                 if(newName == oldName) {
                     exists = true
@@ -161,17 +160,15 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
                 }
             }
             if(exists != true) {
-                mutableContacts.addObject(newContact)
+                curContacts.append(newContact)
             }
         }
-        print(mutableContacts)
-        defaults.setObject(mutableContacts, forKey: "friends")
+        print(curContacts)
+        defaults.setObject(curContacts, forKey: "friends")
         defaults.synchronize()
     }
     
     func promptForAddressBookRequestAccess() {
-        var err: Unmanaged<CFError>? = nil
-        
         ABAddressBookRequestAccessWithCompletion(addressBookRef) {
             (granted: Bool, error: CFError!) in
             dispatch_async(dispatch_get_main_queue()) {
@@ -227,12 +224,15 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if(tableView == contactsTableView) {
             if(indexInfo.count != 0) {
-                let curDict = indexInfo.objectAtIndex(indexPath.row) as! NSMutableDictionary
+                let curDict = indexInfo[indexPath.row]
                 
-                let index = curDict.objectForKey("index") as! Int
-                let type = curDict.objectForKey("type") as! String
-                let hidden = !(curDict.objectForKey("shouldInvite") as! Bool)
-                let imageView = UIImageView(frame: CGRect(x: 15, y: 5, width: contactCell.frame.size.height - 10, height: contactCell.frame.size.height - 10))
+                let index = curDict["index"] as! Int
+                let type = curDict["type"] as! String
+                let hidden = !(curDict["shouldInvite"] as! Bool)
+                
+                let frame = CGRect(x: 15, y: 5, width: contactCell.frame.size.height - 10, height: contactCell.frame.size.height - 10)
+                
+                let imageView = UIImageView(frame: frame)
                 contactCell.check.hidden = hidden
                 if(type == "contact") {
                     let curContact = allContacts.objectAtIndex(index)
@@ -270,7 +270,7 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             print(friends)
             let curFriend = friends.objectAtIndex(indexPath.row) as! NSMutableDictionary
-            contactCell.label.text = curFriend.objectForKey("contact") as! String
+            contactCell.label.text = curFriend["contact"] as? String
             contactCell.icon.image = UIImage(named: "ProfilePicPlaceHolder")
         }
         
@@ -278,14 +278,14 @@ class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let curInfo = (indexInfo.objectAtIndex(indexPath.row) as! NSDictionary).mutableCopy()
-        let shouldInvite = !(curInfo.objectForKey("shouldInvite") as! Bool)
+        var curInfo = indexInfo[indexPath.row]
+        let shouldInvite = !(curInfo["shouldInvite"] as! Bool)
         
         let curCell = tableView.cellForRowAtIndexPath(indexPath) as! MyFriendsTableViewCell
         curCell.check.hidden = !shouldInvite
-        curInfo.setObject(shouldInvite, forKey: "shouldInvite")
+        curInfo["shouldInvite"] = shouldInvite
         
-        indexInfo.replaceObjectAtIndex(indexPath.row, withObject: curInfo)
+        indexInfo[indexPath.row] = curInfo
     }
     
     override func didReceiveMemoryWarning() {
