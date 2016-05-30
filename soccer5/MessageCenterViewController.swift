@@ -27,6 +27,7 @@ class MessageCenterViewController: UIViewController,UITableViewDataSource, UITab
         super.viewDidLoad()
         menuButton.target = self.revealViewController()
         menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        let chatRef = database.reference()
         // Do any additional setup after loading the view.
     }
     

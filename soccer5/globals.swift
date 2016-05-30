@@ -39,4 +39,6 @@ struct ChatMessage {
     var name: String!
     var message: String!
     var image: UIImage?
+    var senderID : String!
+    
 }

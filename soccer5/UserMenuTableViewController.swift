@@ -172,7 +172,8 @@ class UserMenuTableViewController: UITableViewController {
             }
             else if (indexPath.row == MyFriends){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("MyFriendsController")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = GameNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
             }
             else if (indexPath.row == MyProfile){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("ProfileViewNav")

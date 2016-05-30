@@ -27,7 +27,7 @@ enum APIType {
 }
 
 class WebService {
-    
+
     class func postAt(
         url:String,
         parameters: [String: AnyObject]?,
