@@ -19,7 +19,7 @@ class MessageCenterViewController: UIViewController,UITableViewDataSource, UITab
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    var database: FIRDatabase!
+    var dbRef = FIRDatabase.database().reference()
     var storage: FIRStorage!
     var messages: [ChatMessage]!
     
@@ -27,8 +27,8 @@ class MessageCenterViewController: UIViewController,UITableViewDataSource, UITab
         super.viewDidLoad()
         menuButton.target = self.revealViewController()
         menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        let chatRef = database.reference()
         // Do any additional setup after loading the view.
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

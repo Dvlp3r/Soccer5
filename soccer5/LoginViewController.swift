@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
+import Firebase
 
 class LoginViewController: UIViewController {
     var faceBookID:String?
@@ -17,7 +19,6 @@ class LoginViewController: UIViewController {
     var firstName: String = ""
     var email:String = ""
     var dealDict = [String: AnyObject]()
-
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBAction func dontHaveAnAccountBtn(sender: AnyObject) {
@@ -31,35 +32,38 @@ class LoginViewController: UIViewController {
         FacebookLoginHelper.login(self) {
             (status, response, token, id) -> Void in
             
-            guard status else {
-                print("Facebook login failed!")
+            guard let resp = response where status else {
+//                ErrorHandler.displayAlert("Facebook login failed!", message: "", okAction: nil)
                 return
             }
             
-            if let url = response?["picture"]?!["data"]?!["url"] {
-                self.facebookProfileUrl = url as? String
+            let json = JSON(resp)
+            print(token)
+            if let url = json["picture"]["data"]["url"].string {
+                self.facebookProfileUrl = url
             }
             
-            var fullName = String()
             var firstName = String()
-            
-            if let name = response?["first_name"] {
-                firstName = "\(name!)"
-                fullName = "\(name!)"
+            if let name = json["first_name"].string {
+                firstName = name
             }
             
-            if let lastName = response?["last_name"] {
-                fullName = "\(fullName) \(lastName!)"
+            if let lastName = json["last_name"].string {
+                firstName = "\(firstName) \(lastName)"
             }
             
-            
-            
-            if let FBemail = response?["email"] {
-                self.email = "\(FBemail)"
+            if let FBemail = json["email"].string {
+                self.email = FBemail
+                let dbRef = FIRDatabase.database().reference()
+                dbRef.child("user").setValue([
+                    "email": FBemail,
+                    "name": firstName
+                    ])
+
             }
 
             
-            self.fullName = fullName
+            self.fullName = firstName
             self.faceBookID = id
             self.facebookToken = token
             self.firstName = firstName

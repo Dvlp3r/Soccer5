@@ -676,6 +676,14 @@
 					9ECC24891CA46A3B00E68315 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 8NL99R24EE;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					9ECC24A01CA46A3D00E68315 = {
 						CreatedOnToolsVersion = 7.2.1;
