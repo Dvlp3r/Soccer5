@@ -10,7 +10,6 @@ import UIKit
 
 class MyFriendsTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var check: UIImageView!
     @IBOutlet weak var label: UILabel!

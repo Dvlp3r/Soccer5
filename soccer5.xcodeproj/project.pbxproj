@@ -10,6 +10,8 @@
 		6554D4097981621C5CBDE23F /* Pods_soccer5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBC02D51218039D346810 /* Pods_soccer5.framework */; };
 		77AACE3E1CFCF50B00318846 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */; };
 		77AACE401CFCFFDE00318846 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */; };
+		77AACE561CFD106000318846 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE551CFD106000318846 /* Contact.swift */; };
+		77AACE581CFD107300318846 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE571CFD107300318846 /* Person.swift */; };
 		90F1AB057E8E9CB96BB35478 /* Pods_soccer5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E944D2D01A70D82315D4D3A7 /* Pods_soccer5Tests.framework */; };
 		9E0E9B4D1CD29BB500F1F22D /* SoccerLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B4C1CD29BB500F1F22D /* SoccerLocationsViewController.swift */; };
 		9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E9B4E1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift */; };
@@ -200,6 +202,8 @@
 		77AACE3C1CFCF50B00318846 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77AACE551CFD106000318846 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		77AACE571CFD107300318846 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		9BAA4D8510D64AC8A19ED967 /* Pods-soccer5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5Tests/Pods-soccer5Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E0E9B4C1CD29BB500F1F22D /* SoccerLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerLocationsViewController.swift; sourceTree = "<group>"; };
 		9E0E9B4E1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerLocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 				9E9862C91CA989D10075B016 /* UserDefault.swift */,
 				9EFCE4331CD158D900B9ACC1 /* Reservation.swift */,
 				9EE74D3A1CEE347500F90DF9 /* Location.swift */,
+				77AACE551CFD106000318846 /* Contact.swift */,
+				77AACE571CFD107300318846 /* Person.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -947,6 +953,7 @@
 			files = (
 				9EE74D3F1CEE39D300F90DF9 /* WebService.swift in Sources */,
 				9EFB2A751CD0079300078467 /* MainReservationViewController.swift in Sources */,
+				77AACE561CFD106000318846 /* Contact.swift in Sources */,
 				9EB549B11CE125150067D461 /* GameDetailsViewController.swift in Sources */,
 				9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */,
 				9EB549AE1CE11F750067D461 /* GameTableViewCell.swift in Sources */,
@@ -991,6 +998,7 @@
 				9E3534AB1CEF87980098B0FF /* gamePlayerTableViewCell.swift in Sources */,
 				9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
+				77AACE581CFD107300318846 /* Person.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,
 				9E465AC11CF60D8D001DCA62 /* ChatRoomViewController.swift in Sources */,
 			);

@@ -58,7 +58,7 @@ class FacebookLoginHelper {
                         guard let friendsArray = friendsData else  {
                             return
                         }
-                        var arrayOfFriends:[FacebookFriend] = [FacebookFriend]()
+                        var arrayOfFriends = [FacebookFriend]()
                         for friendDictionary in friendsArray {
                             let friend = FacebookFriend()
                             friend.fbID = friendDictionary["id"] as? String
