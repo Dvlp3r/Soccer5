@@ -19,9 +19,9 @@ enum APIType {
         case .User:
             return "users"
         case .Reservation:
-            return "deals"
+            return "Reservation"
         case .Location:
-            return "merchants"
+            return "Location"
         }
     }
 }
