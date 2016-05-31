@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "fbBox.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "fbBox.png",
       "scale" : "2x"
     },
     {
