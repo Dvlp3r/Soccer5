@@ -19,6 +19,7 @@ pod 'Firebase'
 pod 'Firebase/Messaging'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'Firebase/Auth'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 
