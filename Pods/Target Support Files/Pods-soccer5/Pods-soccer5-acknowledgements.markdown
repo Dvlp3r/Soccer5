@@ -227,6 +227,10 @@ Copyright 2016 Google Inc.
 
 Copyright 2016 Google Inc.
 
+## FirebaseAuth
+
+Copyright 2016 Google Inc. All Rights Reserved.
+
 ## FirebaseDatabase
 
 Copyright 2016 Google

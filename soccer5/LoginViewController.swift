@@ -59,9 +59,10 @@ class LoginViewController: UIViewController {
                     "email": FBemail,
                     "name": firstName
                     ])
+                
+                dbRef
 
             }
-
             
             self.fullName = firstName
             self.faceBookID = id
@@ -78,7 +79,6 @@ class LoginViewController: UIViewController {
             ud.userFBFirstName = self.firstName
             ud.userFBProfileURL = self.facebookProfileUrl
             ud.userEmail = self.email
-            
             
             self.performSegueWithIdentifier("MainView", sender: self)
             //            self.initiateRequestToServer()

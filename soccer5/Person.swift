@@ -8,7 +8,7 @@
 
 enum Type: String {
     case Facebook = "facebook"
-    case Contact = "contacts"
+    case Contact = "contact"
     
     static func from(string: String) -> Type {
         if string == "facebook" {

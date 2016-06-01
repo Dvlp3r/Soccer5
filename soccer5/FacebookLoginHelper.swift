@@ -9,6 +9,7 @@
 import FBSDKCoreKit
 import FBSDKShareKit
 import FBSDKLoginKit
+import Firebase
 import Foundation
 
 class FacebookLoginHelper {
@@ -31,6 +32,14 @@ class FacebookLoginHelper {
             } else {
                 
                 let tokenString = result.token.tokenString
+                let credentials = FIRFacebookAuthProvider.credentialWithAccessToken(tokenString)
+                FIRAuth.auth()?.signInWithCredential(credentials, completion: { (user, error) in
+                    if let user = user {
+                        print(user)
+                    } else {
+                        print(error)
+                    }
+                })
                 
                 FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,first_name,last_name,picture.width(1000).height(1000),birthday,gender"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                     if error != nil {
