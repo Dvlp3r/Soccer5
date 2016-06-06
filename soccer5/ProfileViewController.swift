@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SwiftyJSON
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let password = 0
@@ -22,6 +23,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var personalInfoArray = ["Password", "Email", "Card", "Phone Number"]
     var additionalArray = ["Notifications", "Logout"]
     var newPorfilePic:UIImage = UIImage()
+    var ud = User()
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var profilePic: UIImageView!
@@ -48,12 +50,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         profilePic.clipsToBounds = true
         
         // check if user is using facebook
-        if User().userFBID != nil {
-            if (((User().userFBProfileURL)) != nil){
-                Alamofire.request(.GET, NSURL(string:User().userFBProfileURL!)!)
-                    .responseImage { response in
-                        if let image = response.result.value {
-                            self.profilePic.image = image
+        if isAFacbookUser() == true {
+            if User().userFBID != nil {
+                if (((User().userFBProfileURL)) != nil){
+                    Alamofire.request(.GET, NSURL(string:User().userFBProfileURL!)!)
+                        .responseImage { response in
+                            if let image = response.result.value {
+                                self.profilePic.image = image
                         }
                 }
                 
@@ -62,16 +65,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 profilePic.image = UIImage(named: "ProfilePicPlaceHolder")
             }
             
-            profileName.text = User().userFBFullName!
+                profileName.text = User().userFBFullName!
+            }
+        } else {
+            profilePic.image = UIImage(named: "ProfilePicPlaceHolder")
         }
-        // Do any additional setup after loading the view.
+        
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
-        // TODO: save this image to aws s3 and update user settings
+        // TODO: save this image and update user settings
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         profilePic.image = chosenImage
     
@@ -138,8 +144,54 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if tableView == PersonalTable {
+            return tableView.frame.height / 4.5
+        } else {
+            return tableView.frame.height / 2.5
+        }
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if tableView == PersonalTable {
+            let personalCell = tableView.dequeueReusableCellWithIdentifier("personalInfoCell", forIndexPath: indexPath) as! PersonalInfoTableViewCell
+            switch indexPath.row {
+            
+                
+            default:
+                break
+            }
+            
+        } else {
+            
+            let additionalCell = tableView.dequeueReusableCellWithIdentifier("additionalSettingsCell", forIndexPath: indexPath) as! AdditionalSettingsTableViewCell
+            switch indexPath.row {
+  
+                // logout
+            case 1:
+                WebService.send(.DELETE,
+                    atURL: "\(BaseURL)/auth/sign_out",
+                    parameters: nil,
+                    successBlock: { (response) in
+                        guard let Resp = response else {
+                            return
+                        }
+                        print(JSON(Resp))
+                        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("LoginViewController")
+                        let navCtrl = LoginNavigationController(rootViewController: controller)
+                        self.revealViewController().pushFrontViewController(navCtrl, animated: true)
+
+                        print("Logged out user with id: \(self.ud.userID!)")
+                    },
+                    failureBlock: { (message) in
+                        print("\(message): Failed to logout user")
+                                    
+                })
+            default:
+                break
+            }
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

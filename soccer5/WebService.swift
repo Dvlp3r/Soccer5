@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+let BaseURL = "https://soccer5api.herokuapp.com"
+
 enum APIType {
     case User
     case Reservation
@@ -26,8 +28,12 @@ enum APIType {
     }
 }
 
-class WebService {
 
+
+
+class WebService {
+    
+    
     class func send(
         method: Alamofire.Method,
         atURL url:String,
@@ -35,7 +41,7 @@ class WebService {
         successBlock:((response:AnyObject?) -> Void),
         failureBlock:((message:String) -> Void)) {
         
-        print("Initiated Post request at " + url)
+        print("Initiated request at " + url)
         
         Alamofire.request(
             method,
@@ -50,14 +56,14 @@ class WebService {
                 
                 guard let code = response.response?.statusCode else {
                     failureBlock(message: "No connection")
+                    print(response.response?.statusCode)
                     return
                 }
                 guard code == 200 else {
                     print(code)
                     switch code {
                     case 401:
-                        print(401)
-                        successBlock(response: response.result.value)
+                        failureBlock(message: String(code))
                     case 417:
                         failureBlock(message: (errorMsg as! String))
                     default:

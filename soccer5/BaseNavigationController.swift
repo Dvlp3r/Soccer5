@@ -8,14 +8,17 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController, SWRevealViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
+
+        
     }
     
+
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }

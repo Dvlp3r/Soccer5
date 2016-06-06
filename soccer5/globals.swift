@@ -42,3 +42,19 @@ struct ChatMessage {
     var senderID : String!
     
 }
+
+class ErrorHandler {
+    
+    class func displayAlert(title: String, message: String, okAction: ((UIAlertAction)->Void)?) {
+        if let topController = UIApplication.topViewController() {
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: okAction)
+            alertController.addAction(okAction)
+            
+            topController.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+}
+

@@ -20,7 +20,9 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     var reservationDate: String = ""
     var reservationLocation: String = ""
     var reservationField: String = ""
-    let times = ["6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM"]
+    var textFieldData:String = "John"
+    
+    let times = ["6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"]
     var curDate : NSDate? = NSDate()
   
 
@@ -39,7 +41,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             convertCfTypeToString(KNSemiModalOptionKeys.shadowOpacity) as String! : 0.3 as Float,
             convertCfTypeToString(KNSemiModalOptionKeys.animationDuration) as String! : 0.5 as Float,
             convertCfTypeToString(KNSemiModalOptionKeys.pushParentBack) as String! : true as Bool
-            ])
+        ])
         
     }
     @IBAction func choseLocationBtn(sender: AnyObject) {
@@ -62,6 +64,19 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             locationOutlet.text = user.selectedLocation!
         }
 
+        WebService.send(.GET,
+            atURL: "\(BaseURL)/api/v1/locations",
+            parameters: nil,
+            successBlock: { (response) in
+                guard let Resp = response else {
+                    return
+                }
+                            
+                print(Resp)
+            },
+            failureBlock: { (message) in
+                print(message)
+        })
     }
 
     func sideMenuDidOpen() {
@@ -84,7 +99,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     
     lazy var formatter: NSDateFormatter = {
         var tmpFormatter = NSDateFormatter()
-        tmpFormatter.dateFormat = "dd/MM/yyyy"
+        tmpFormatter.dateFormat = "dd/MM"
         return tmpFormatter
     }()
     func refreshTitle() {
@@ -101,6 +116,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     }
     
     func datePicker(datePicker: THDatePickerViewController!, selectedDate: NSDate!) {
+        print(selectedDate)
         reservationDate = formatter.stringFromDate(selectedDate)
         collectionView.reloadData()
     }
@@ -134,13 +150,14 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     
     
     
-    // custom picker view functions
+    // custom Time picker view functions
     // ------------------------------------------------------------
     
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
        
         return times.count
     }
+    
     
     func pickerView(pickerView: AKPickerView, titleForItem item: Int) -> String {
        
@@ -155,13 +172,15 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     func setPickerViewOptions() {
         pickerView.delegate = self
         pickerView.dataSource = self
-        pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 20)!
-        pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 22)!
-        pickerView.pickerViewStyle = .Wheel
+        pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 15)!
+        pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 20)!
+        pickerView.highlightedTextColor = UIColor.whiteColor()
         pickerView.backgroundColor = UIColor.clearColor()
+        pickerView.pickerViewStyle = .Wheel
         pickerView.textColor = UIColor.whiteColor()
         pickerView.maskDisabled = false
         pickerView.interitemSpacing = 20
+        
     }
     // ----------------------------------------------------------------------------
     
@@ -308,7 +327,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             // if user wants to reserve, save fields to reservation model
             
             let reservationDataArr = [
-                "User_id": self.user.userFBID!,
+                "User_id": self.user.userID!,
                 "field": self.reservationField,
                 "date": self.reservationDate,
                 "time": self.reservationTime,
@@ -317,6 +336,30 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             self.listOfReservations.append(reservationDataArr)
             
             // TODO: Implement backend to save reservation
+
+
+//            WebService.send(.POST,
+//                atURL: "\(BaseURL)/api/v1/reservations",
+//                parameters:[
+//                    "reservation": [
+//                        
+//                    ],
+//                    "reservation[field_id]": "",
+//                    
+//                    "reservation[date]": ""
+//                    
+//                ],
+//                successBlock: { (response) in
+//                    guard let Resp = response else {
+//                        return
+//                    }
+//                    
+//                    print(Resp)
+//                },
+//                failureBlock: { (message) in
+//                    print(message)
+//            })
+            
             // present an alert on success
             let successAlert = UIAlertController(title: nil, message: "Reservation is successfully made" , preferredStyle: UIAlertControllerStyle.Alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))

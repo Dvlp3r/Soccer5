@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-class UserMenuTableViewController: UITableViewController {
+class UserMenuTableViewController: UITableViewController,SWRevealViewControllerDelegate {
     let userProfile = 0
     let ReserveField = 1
     let UpcomingGames = 2
@@ -29,15 +29,20 @@ class UserMenuTableViewController: UITableViewController {
         
         self.tableView.backgroundColor = tableThemeColor
         self.tableView.separatorStyle = .None
-        
+        self.revealViewController().rearViewRevealWidth = 285
         self.tableView.reloadData()
+        self.revealViewController().panGestureRecognizer()
+        self.revealViewController().tapGestureRecognizer()
         
     }
     
     override func viewWillAppear(animated: Bool) {
-//        getUserInfo()
+        self.revealViewController().frontViewController.view.userInteractionEnabled = false
+        self.revealViewController().frontViewController.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
-    
+    override func viewWillDisappear(animated: Bool) {
+        self.revealViewController().frontViewController.view.userInteractionEnabled = true
+    }
 
     
 
@@ -79,28 +84,29 @@ class UserMenuTableViewController: UITableViewController {
             let cellIdentifier = "UserProfileTableViewCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UserProfileTableViewCell
             
-            //verifies the user profile image
-            if (((User().userFBProfileURL)) != nil){
-                Alamofire.request(.GET, NSURL(string:User().userFBProfileURL!)!)
-                    .responseImage { response in
-                        if let image = response.result.value {
-                            cell.img_userProfile.image = image
-                        }
+            if isAFacbookUser() == true {
+                if (((User().userFBProfileURL)) != nil){
+                    Alamofire.request(.GET, NSURL(string:User().userFBProfileURL!)!)
+                        .responseImage { response in
+                            if let image = response.result.value {
+                                cell.img_userProfile.image = image
+                            }
+                    }
+                
+                }
+                else{
+                    cell.img_userProfile.image = UIImage(named: "ProfilePicPlaceHolder")
+                }
+            
+                if(User().userFBFullName?.characters.count > 14){
+                    cell.lbl_userName.text = User().userFBFirstName!
+                }else{
+                
+                    cell.lbl_userName.text = User().userFBFullName!
                 }
                 
-            }
-            else{
+            } else {
                 cell.img_userProfile.image = UIImage(named: "ProfilePicPlaceHolder")
-            }
-            
-    
-            //if the characters of username is greater than 14 then the first name displays as the name
-            
-            if(User().userFBFullName?.characters.count > 14){
-                cell.lbl_userName.text = User().userFBFirstName!
-            }else
-            {
-                cell.lbl_userName.text = User().userFBFullName!
             }
             
             return cell
@@ -167,7 +173,8 @@ class UserMenuTableViewController: UITableViewController {
             }
             else if (indexPath.row == Notifications){
                 let controller = storyboard!.instantiateViewControllerWithIdentifier("notificationController")
-                self.revealViewController().pushFrontViewController(controller, animated: true)
+                let navCtrl = MessageCenterNavigationController(rootViewController: controller)
+                self.revealViewController().pushFrontViewController(navCtrl, animated: true)
                 
             }
             else if (indexPath.row == MyFriends){

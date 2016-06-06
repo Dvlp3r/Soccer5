@@ -31,6 +31,7 @@
 		9E465AE01CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E465ADF1CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift */; };
 		9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */; };
 		9E54F2201CFCCBC9006BCE97 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */; };
+		9E5A42D31D0615B500FB78AA /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A42D21D0615B500FB78AA /* LoginNavigationController.swift */; };
 		9E72E7971CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */; };
 		9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */; };
 		9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */; };
@@ -55,7 +56,6 @@
 		9ECC249B1CA46A3C00E68315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECC24991CA46A3C00E68315 /* LaunchScreen.storyboard */; };
 		9ECC24A61CA46A3D00E68315 /* soccer5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */; };
 		9EE74D3B1CEE347500F90DF9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3A1CEE347500F90DF9 /* Location.swift */; };
-		9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */; };
 		9EE74D3F1CEE39D300F90DF9 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D3E1CEE39D300F90DF9 /* WebService.swift */; };
 		9EE74D441CEE53FB00F90DF9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D431CEE53FB00F90DF9 /* GameViewController.swift */; };
 		9EE74D471CEE6AAC00F90DF9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */; };
@@ -224,6 +224,7 @@
 		9E465ADF1CF653F1001DCA62 /* ConversationPreviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPreviewTableViewCell.swift; sourceTree = "<group>"; };
 		9E5344451CDBC27C00D4CB88 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		9E5A42D21D0615B500FB78AA /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		9E72E7961CDA71AB001C6D29 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9E72E7981CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9E9862C51CA989860075B016 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
@@ -252,7 +253,6 @@
 		9ECC24A51CA46A3D00E68315 /* soccer5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soccer5Tests.swift; sourceTree = "<group>"; };
 		9ECC24A71CA46A3D00E68315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EE74D3A1CEE347500F90DF9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRegisterUser.swift; sourceTree = "<group>"; };
 		9EE74D3E1CEE39D300F90DF9 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		9EE74D431CEE53FB00F90DF9 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -389,7 +389,6 @@
 		9E9862BF1CA980630075B016 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				9EE74D3C1CEE39C500F90DF9 /* WSRegisterUser.swift */,
 				9EE74D3E1CEE39D300F90DF9 /* WebService.swift */,
 				9E54F21F1CFCCBC9006BCE97 /* Firebase.swift */,
 			);
@@ -591,6 +590,7 @@
 				9EE74D461CEE6AAC00F90DF9 /* BaseNavigationController.swift */,
 				9EE74D481CEE6ABE00F90DF9 /* GameNavigationController.swift */,
 				9E465ABB1CF607E7001DCA62 /* MessageCenterNavigationController.swift */,
+				9E5A42D21D0615B500FB78AA /* LoginNavigationController.swift */,
 			);
 			name = "Navigation ";
 			sourceTree = "<group>";
@@ -980,6 +980,7 @@
 				9EB549BA1CE1384B0067D461 /* ChangeDetailTableViewCell.swift in Sources */,
 				9EB549B81CE137D00067D461 /* GameModificationsViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
+				9E5A42D31D0615B500FB78AA /* LoginNavigationController.swift in Sources */,
 				9E2BEC771CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
@@ -1004,7 +1005,6 @@
 				9EB549BD1CE13A710067D461 /* NotificationsViewController.swift in Sources */,
 				9EE74D3B1CEE347500F90DF9 /* Location.swift in Sources */,
 				9E3534AB1CEF87980098B0FF /* gamePlayerTableViewCell.swift in Sources */,
-				9EE74D3D1CEE39C500F90DF9 /* WSRegisterUser.swift in Sources */,
 				9E9862D21CA99E870075B016 /* UserInfo.swift in Sources */,
 				77AACE581CFD107300318846 /* Person.swift in Sources */,
 				9E9862C61CA989860075B016 /* FacebookLoginHelper.swift in Sources */,

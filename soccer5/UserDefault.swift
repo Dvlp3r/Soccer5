@@ -82,15 +82,15 @@ struct User {
             ud.setObject(newValue, forKey: "selectedLocation")
         }
     }
-//    
-//    var userPhone:String? {
-//        get {
-//            return  ud.objectForKey("UserPhone")
-//        } set {
-//            ud.setObject(newValue, forKey: "UserPhone")
-//        }
-//    }
-//    
+    
+    var userPhone:String? {
+        get {
+            return  ud.objectForKey("UserPhone") as? String
+        } set {
+            ud.setObject(newValue, forKey: "UserPhone")
+        }
+    }
+    
 //    var userReservations:[Reservation]? {
 //        get {
 //            return  ud.objectForKey("UserReservations")

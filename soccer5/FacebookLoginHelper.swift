@@ -10,6 +10,7 @@ import FBSDKCoreKit
 import FBSDKShareKit
 import FBSDKLoginKit
 import Firebase
+import FirebaseAuth
 import Foundation
 
 class FacebookLoginHelper {

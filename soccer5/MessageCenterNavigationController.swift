@@ -14,6 +14,7 @@ class MessageCenterNavigationController: UINavigationController {
         super.viewDidLoad()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
+
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

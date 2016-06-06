@@ -9,6 +9,7 @@
 import UIKit
 import AddressBook
 import Firebase
+import FirebaseAuth
 
 class MyFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
