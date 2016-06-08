@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomFieldLayout: UICollectionViewLayout {
+    
     var cellHeight: CGFloat = 150
     var cellWidth: CGFloat = 150
     var soccerLocation = User().selectedLocation

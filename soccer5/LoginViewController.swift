@@ -213,6 +213,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         phoneNumberTextField.setFormatting("###-###-####", replacementChar: "#")
         spinner.hidden = true
+        // setting a default location for user 
+        if ud.selectedLocation == nil {
+            ud.selectedLocation = "Soccer 5 Kendall"
+        }
         
     }
     

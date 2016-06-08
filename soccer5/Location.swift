@@ -9,23 +9,17 @@
 import Foundation
 import SwiftyJSON
 
-//class Location: Equatable {
+//class Location {
 //    
 //    let id: Int
-//    let address: String
 //    let name: String
 //    let phone: String
 //    let website: String
 //    let fieldTypes: [String]
-//    var reservations: [Reservation]
 //    
 //    init(json: JSON) throws {
-//        guard let locationID = json["id"].int else{
-//            print("could not find location id")
-//        }
-//        
-//        id = locationID
-//        address = json["address"].string ?? "no address"
+//
+////        id = locationID
 //        name = json["name"].string ?? "no name"
 //        phone = json["phone"].string ?? "no phone"
 //        website = json["website"].string ?? "no website"
@@ -41,8 +35,4 @@ import SwiftyJSON
 ////        }
 //    }
 //    
-//}
-//
-//func ==(lhs: Location, rhs: Location) -> Bool {
-//    return lhs.id == rhs.id
 //}

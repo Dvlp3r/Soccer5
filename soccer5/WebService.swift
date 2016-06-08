@@ -86,9 +86,7 @@ class WebService {
                     print(response.response?.statusCode)
                     return
                 }
-                if code == 200{
-                    print("worked")
-                }
+
                 guard code == 200 else {
                     print(code)
                     switch code {
