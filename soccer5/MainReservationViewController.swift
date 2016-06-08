@@ -63,9 +63,10 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         if user.selectedLocation != nil {
             locationOutlet.text = user.selectedLocation!
         }
-
+        collectionView.reloadData()
         WebService.send(.GET,
             atURL: "\(BaseURL)/api/v1/locations",
+            headers: returnHeaders,
             parameters: nil,
             successBlock: { (response) in
                 guard let Resp = response else {
@@ -79,11 +80,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         })
     }
 
-    func sideMenuDidOpen() {
-        print("sideMenuDidOpen")
-    }
-    
-    
+
     // functions for custom date picker settings 
     //-------------------------------------------------------------
     
@@ -233,6 +230,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                 return 0
         }
     }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FieldCell", forIndexPath: indexPath) as! FieldCollectionViewCell
 
@@ -242,20 +240,22 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                 switch indexPath.section{
                     case 0:
                         if indexPath.row == 0 {
-                            
+                        
                             cell.fieldImage.image = UIImage(named: "field-7-7-hialeah")
                             cell.fieldType.text = FieldType.Field7v7.stringValue()
-                            
                             
                         } else {
+                        
                             cell.fieldImage.image = UIImage(named: "field-7-7-hialeah")
                             cell.fieldType.text = FieldType.Field7v7.stringValue()
+                        
                         }
                     
                     default:
                         break
                     
                 }
+            
             case "Soccer 5 Tropical Park":
                 switch indexPath.section{
                     case 0:

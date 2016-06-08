@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
             
             WebService.send(.POST,
             atURL: "\(BaseURL)/auth/sign_in",
+            headers: nil,
             parameters: [
                 "phone":"\(phoneNumberTextField.formattedString)",
                 "password":"\(self.passwordTextField.text)"
@@ -152,6 +153,7 @@ class LoginViewController: UIViewController {
             
             WebService.send(.POST,
                 atURL: "\(BaseURL)/auth/sign_in",
+                headers: nil,
                 parameters: [
                 "fb_id":"\(self.ud.userFBID!)",
                 "access_token":"\(token!)"
@@ -161,7 +163,8 @@ class LoginViewController: UIViewController {
                         return
                     }
                     var json = JSON(Resp)
-   
+                    
+                    
                     self.performSegueWithIdentifier("MainView", sender: self)
                     
                     self.ud.userID = String(json["data"]["id"])
@@ -171,6 +174,7 @@ class LoginViewController: UIViewController {
                     if message == "401" {
                         WebService.send(.POST,
                             atURL: "\(BaseURL)/auth",
+                            headers: nil,
                             parameters: [
                                 "fb_id":"\(self.ud.userFBID!)",
                                 "access_token":"\(token!)"
@@ -180,7 +184,8 @@ class LoginViewController: UIViewController {
                                     return
                                 }
                                 var json = JSON(Resp)
-                            
+                                print(json)
+                                
                                 self.performSegueWithIdentifier("MainView", sender: self)
 
                                 self.ud.userID = String(json["data"]["id"])

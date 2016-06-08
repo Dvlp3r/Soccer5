@@ -171,6 +171,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             case 1:
                 WebService.send(.DELETE,
                     atURL: "\(BaseURL)/auth/sign_out",
+                    headers: returnHeaders,
                     parameters: nil,
                     successBlock: { (response) in
                         guard let Resp = response else {

@@ -22,10 +22,11 @@ class CustomFieldLayout: UICollectionViewLayout {
     
     override func prepareLayout() {
         if self.cache.isEmpty {
-            
+        
 
             self.numberOfColumns = self.collectionView?.numberOfItemsInSection(0)
             self.numberOfRows = self.collectionView?.numberOfSections()
+            
             
             // Dynamically change cellWidth if total cell width is smaller than whole bounds
              if (self.collectionView?.bounds.size.width)!/CGFloat(self.numberOfColumns) > cellWidth {
@@ -44,6 +45,27 @@ class CustomFieldLayout: UICollectionViewLayout {
                     let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
                     attributes.frame = CGRectIntegral(CGRectMake(cellWidth*CGFloat(column), cellHeight*CGFloat(row), cellWidth, cellHeight))
                     
+                    switch User().selectedLocation! {
+                    case "Soccer 5 Hialeah":
+                       
+                        switch attributes.indexPath.row {
+                        case 0:
+                            attributes.frame = CGRectIntegral(CGRectMake(150*CGFloat(column), 300*CGFloat(row), 150, 300))
+                        case 1:
+                            attributes.frame = CGRectIntegral(CGRectMake(150*CGFloat(column), 300*CGFloat(row), 150, 300))
+                        default:
+                            break
+                        }
+//                    case "Soccer 5 Tropical Park":
+//                        
+//                    case "Soccer 5 Kendall":
+                        
+                    default:
+                        break
+                    }
+                    
+                    
+                    
                     row_temp.append(attributes)
                     
                     self.cache.append(attributes)
@@ -52,6 +74,7 @@ class CustomFieldLayout: UICollectionViewLayout {
             }
         }
     }
+    
     
     override func collectionViewContentSize() -> CGSize {
         return CGSize(width: CGFloat(self.numberOfColumns)*cellWidth, height: CGFloat(self.numberOfRows)*cellHeight)
@@ -68,4 +91,5 @@ class CustomFieldLayout: UICollectionViewLayout {
         }
         return layoutAttributes
     }
+   
 }

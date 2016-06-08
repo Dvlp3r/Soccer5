@@ -58,3 +58,13 @@ class ErrorHandler {
     }
 }
 
+struct HeaderFields {
+    var uid:String = ""
+    var access_token:String = ""
+    var token_type:String = ""
+    var client:String = ""
+    var expiry:String = ""
+
+}
+
+var returnHeaders = [String: String]()

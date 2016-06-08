@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 let BaseURL = "https://soccer5api.herokuapp.com"
 
@@ -37,15 +38,17 @@ class WebService {
     class func send(
         method: Alamofire.Method,
         atURL url:String,
+        headers: [String : String]?,
         parameters: [String: AnyObject]?,
         successBlock:((response:AnyObject?) -> Void),
         failureBlock:((message:String) -> Void)) {
         
         print("Initiated request at " + url)
-        
+       
         Alamofire.request(
             method,
             url,
+            headers: headers,
             parameters: parameters,
             encoding: .JSON)
             .responseJSON {
@@ -53,11 +56,38 @@ class WebService {
                 
                 let headers = response.response?.allHeaderFields
                 let errorMsg = headers?["errorMessage"]
+                if headers != nil {
+                    let jsonHeaders = JSON(headers!)
+                    var headerFields = HeaderFields()
+                    if jsonHeaders["Access-Token"] != nil {
+                        headerFields.access_token = jsonHeaders["Access-Token"].string!
+                        headerFields.client = jsonHeaders["Client"].string!
+                        headerFields.expiry = jsonHeaders["Expiry"].string!
+                        headerFields.token_type = jsonHeaders["Token-Type"].string!
+                        headerFields.uid = jsonHeaders["Uid"].string!
+                    }
+                    returnHeaders = [
+                        "access-token": headerFields.access_token,
+                        "client": headerFields.client,
+                        "expiry": headerFields.expiry,
+                        "token-type": headerFields.token_type,
+                        "uid": headerFields.uid
+                    ]
+                    
+                } else {
+                    print("No headers from request")
+                }
                 
+                
+                
+
                 guard let code = response.response?.statusCode else {
                     failureBlock(message: "No connection")
                     print(response.response?.statusCode)
                     return
+                }
+                if code == 200{
+                    print("worked")
                 }
                 guard code == 200 else {
                     print(code)

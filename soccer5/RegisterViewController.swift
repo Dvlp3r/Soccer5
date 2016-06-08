@@ -69,6 +69,7 @@ class RegisterViewController: UIViewController {
             
             WebService.send(.POST,
                 atURL: "\(BaseURL)/auth/sign_in",
+                headers: nil,
                 parameters: [
                     "fb_id":"\(self.ud.userFBID!)",
                     "access_token":"\(token!)"
@@ -88,6 +89,7 @@ class RegisterViewController: UIViewController {
                     if message == "401" {
                         WebService.send(.POST,
                         atURL: "\(BaseURL)/auth",
+                        headers: nil,
                         parameters: [
                             "fb_id":"\(self.ud.userFBID!)",
                             "access_token":"\(token!)"
@@ -122,6 +124,7 @@ class RegisterViewController: UIViewController {
             
             WebService.send(.POST,
             atURL: "\(BaseURL)/auth",
+            headers: nil,
             parameters: [
                 "phone":"\(phoneNumberInput.formattedString)",
                 "password":"\(passwordInput.text)",
