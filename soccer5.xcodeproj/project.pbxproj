@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6554D4097981621C5CBDE23F /* Pods_soccer5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBC02D51218039D346810 /* Pods_soccer5.framework */; };
+		67770A3B1D08AF6E007E21C0 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A3A1D08AF6E007E21C0 /* Friend.swift */; };
+		67770A4E1D08B9EF007E21C0 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A4D1D08B9EF007E21C0 /* ContactsViewController.swift */; };
+		67770A501D08DBE8007E21C0 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A4F1D08DBE8007E21C0 /* ContactView.swift */; };
+		67770A521D08DCCB007E21C0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A511D08DCCB007E21C0 /* FriendCell.swift */; };
 		77AACE3E1CFCF50B00318846 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */; };
 		77AACE401CFCFFDE00318846 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */; };
 		77AACE561CFD106000318846 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE551CFD106000318846 /* Contact.swift */; };
@@ -198,6 +202,10 @@
 /* Begin PBXFileReference section */
 		253F204B6DEF24DA61FA0183 /* Pods-soccer5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.debug.xcconfig"; sourceTree = "<group>"; };
 		59829A79586153E8E8043967 /* Pods-soccer5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5Tests/Pods-soccer5Tests.release.xcconfig"; sourceTree = "<group>"; };
+		67770A3A1D08AF6E007E21C0 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		67770A4D1D08B9EF007E21C0 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		67770A4F1D08DBE8007E21C0 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		67770A511D08DCCB007E21C0 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		77AACE3C1CFCF50B00318846 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -341,6 +349,9 @@
 			children = (
 				9E2BEC761CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift */,
 				ACF829851CF3C1C200BC75BD /* MyFriendsViewController.swift */,
+				67770A4D1D08B9EF007E21C0 /* ContactsViewController.swift */,
+				67770A4F1D08DBE8007E21C0 /* ContactView.swift */,
+				67770A511D08DCCB007E21C0 /* FriendCell.swift */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -464,6 +475,7 @@
 				9EFCE4331CD158D900B9ACC1 /* Reservation.swift */,
 				9EE74D3A1CEE347500F90DF9 /* Location.swift */,
 				77AACE551CFD106000318846 /* Contact.swift */,
+				67770A3A1D08AF6E007E21C0 /* Friend.swift */,
 				77AACE571CFD107300318846 /* Person.swift */,
 			);
 			name = Model;
@@ -672,7 +684,7 @@
 				TargetAttributes = {
 					9ECC24891CA46A3B00E68315 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 8NL99R24EE;
+						DevelopmentTeam = E3XMH5WD5Q;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -977,12 +989,15 @@
 				9EB549BA1CE1384B0067D461 /* ChangeDetailTableViewCell.swift in Sources */,
 				9EB549B81CE137D00067D461 /* GameModificationsViewController.swift in Sources */,
 				9E9862CD1CA98AA40075B016 /* LoginViewController.swift in Sources */,
+				67770A521D08DCCB007E21C0 /* FriendCell.swift in Sources */,
 				9E5A42D31D0615B500FB78AA /* LoginNavigationController.swift in Sources */,
 				9E2BEC771CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
 				9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */,
 				9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */,
+				67770A3B1D08AF6E007E21C0 /* Friend.swift in Sources */,
+				67770A4E1D08B9EF007E21C0 /* ContactsViewController.swift in Sources */,
 				9EB549B51CE12ED20067D461 /* PlayerCollectionViewCell.swift in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
 				9ECC24961CA46A3C00E68315 /* soccer5.xcdatamodeld in Sources */,
@@ -997,6 +1012,7 @@
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
 				9EB549B31CE1275B0067D461 /* GameDetailTableViewCell.swift in Sources */,
 				9E0E9B711CD81D4C00F1F22D /* UserProfileTableViewCell.swift in Sources */,
+				67770A501D08DBE8007E21C0 /* ContactView.swift in Sources */,
 				9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */,
 				9E0E9B6F1CD8157700F1F22D /* MenuListTableViewCell.swift in Sources */,
 				9EB549BD1CE13A710067D461 /* NotificationsViewController.swift in Sources */,
@@ -1055,6 +1071,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jennifer Duffey (ZEMJXP487Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1077,6 +1094,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3b9fae0d-42d0-4183-be29-c78fa9aab958";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1099,6 +1117,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jennifer Duffey (ZEMJXP487Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1114,6 +1133,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3b9fae0d-42d0-4183-be29-c78fa9aab958";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1125,14 +1145,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jennifer Duffey (ZEMJXP487Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3b9fae0d-42d0-4183-be29-c78fa9aab958";
 				SWIFT_OBJC_BRIDGING_HEADER = "soccer5/soccer5-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1144,14 +1164,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jennifer Duffey (ZEMJXP487Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = soccer5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dvlper.soccer5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3b9fae0d-42d0-4183-be29-c78fa9aab958";
 				SWIFT_OBJC_BRIDGING_HEADER = "soccer5/soccer5-Bridging-Header.h";
 			};
 			name = Release;
