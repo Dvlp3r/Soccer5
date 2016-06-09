@@ -177,8 +177,20 @@ class UserMenuTableViewController: UITableViewController,SWRevealViewControllerD
                 self.revealViewController().pushFrontViewController(navCtrl, animated: true)
                 
             }
-            else if (indexPath.row == MyFriends){
-                let controller = storyboard!.instantiateViewControllerWithIdentifier("MyFriendsController")
+            else if (indexPath.row == MyFriends)
+            {
+                var controllerIdentifier: String
+                
+                if #available(iOS 9.0, *)
+                {
+                    controllerIdentifier = "ContactsViewController"
+                }
+                else
+                {
+                    controllerIdentifier = "MyFriendsController"
+                }
+               
+                let controller = storyboard!.instantiateViewControllerWithIdentifier(controllerIdentifier)
                 let navCtrl = GameNavigationController(rootViewController: controller)
                 self.revealViewController().pushFrontViewController(navCtrl, animated: true)
             }
