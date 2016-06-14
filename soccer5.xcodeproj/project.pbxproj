@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6554D4097981621C5CBDE23F /* Pods_soccer5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBC02D51218039D346810 /* Pods_soccer5.framework */; };
+		67331A591D0F67B1004F390C /* ReservationHeaderViewCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67331A581D0F67B1004F390C /* ReservationHeaderViewCollectionReusableView.swift */; };
+		674C63F01D0F4DF800A6CAB7 /* ReservationCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C63EF1D0F4DF800A6CAB7 /* ReservationCollectionView.swift */; };
 		67770A3B1D08AF6E007E21C0 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A3A1D08AF6E007E21C0 /* Friend.swift */; };
 		67770A4E1D08B9EF007E21C0 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A4D1D08B9EF007E21C0 /* ContactsViewController.swift */; };
 		67770A501D08DBE8007E21C0 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A4F1D08DBE8007E21C0 /* ContactView.swift */; };
 		67770A521D08DCCB007E21C0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67770A511D08DCCB007E21C0 /* FriendCell.swift */; };
+		67EEA9091D0E6D850061660C /* ReservationFieldTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EEA9081D0E6D850061660C /* ReservationFieldTime.swift */; };
+		67EEA91C1D0E75C40061660C /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EEA91B1D0E75C40061660C /* TimeCell.swift */; };
 		77AACE3E1CFCF50B00318846 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */; };
 		77AACE401CFCFFDE00318846 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */; };
 		77AACE561CFD106000318846 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AACE551CFD106000318846 /* Contact.swift */; };
@@ -202,10 +206,14 @@
 /* Begin PBXFileReference section */
 		253F204B6DEF24DA61FA0183 /* Pods-soccer5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5/Pods-soccer5.debug.xcconfig"; sourceTree = "<group>"; };
 		59829A79586153E8E8043967 /* Pods-soccer5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soccer5Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-soccer5Tests/Pods-soccer5Tests.release.xcconfig"; sourceTree = "<group>"; };
+		67331A581D0F67B1004F390C /* ReservationHeaderViewCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationHeaderViewCollectionReusableView.swift; sourceTree = "<group>"; };
+		674C63EF1D0F4DF800A6CAB7 /* ReservationCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCollectionView.swift; sourceTree = "<group>"; };
 		67770A3A1D08AF6E007E21C0 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		67770A4D1D08B9EF007E21C0 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		67770A4F1D08DBE8007E21C0 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		67770A511D08DCCB007E21C0 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		67EEA9081D0E6D850061660C /* ReservationFieldTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationFieldTime.swift; sourceTree = "<group>"; };
+		67EEA91B1D0E75C40061660C /* TimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		77AACE3C1CFCF50B00318846 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		77AACE3D1CFCF50B00318846 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		77AACE3F1CFCFFDE00318846 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -477,6 +485,7 @@
 				77AACE551CFD106000318846 /* Contact.swift */,
 				67770A3A1D08AF6E007E21C0 /* Friend.swift */,
 				77AACE571CFD107300318846 /* Person.swift */,
+				67EEA9081D0E6D850061660C /* ReservationFieldTime.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -532,9 +541,12 @@
 		9EB6A8211CC9650F00F67D0F /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */,
 				9EFB2A741CD0079200078467 /* MainReservationViewController.swift */,
 				9E3534B31CEF937B0098B0FF /* FieldCollectionViewCell.swift */,
-				9E39DC2F1CF39411007D7824 /* CustomFieldLayout.swift */,
+				67EEA91B1D0E75C40061660C /* TimeCell.swift */,
+				674C63EF1D0F4DF800A6CAB7 /* ReservationCollectionView.swift */,
+				67331A581D0F67B1004F390C /* ReservationHeaderViewCollectionReusableView.swift */,
 			);
 			name = Reservation;
 			sourceTree = "<group>";
@@ -981,6 +993,7 @@
 				9E465ABC1CF607E7001DCA62 /* MessageCenterNavigationController.swift in Sources */,
 				9EE74D491CEE6ABE00F90DF9 /* GameNavigationController.swift in Sources */,
 				77AACE3E1CFCF50B00318846 /* SWRevealViewController.m in Sources */,
+				67EEA91C1D0E75C40061660C /* TimeCell.swift in Sources */,
 				9E54F2201CFCCBC9006BCE97 /* Firebase.swift in Sources */,
 				9E2BEC341CF7822E0031D0E3 /* MessageCenterViewController.swift in Sources */,
 				9E72E7991CDA71C3001C6D29 /* AdditionalSettingsTableViewCell.swift in Sources */,
@@ -994,9 +1007,11 @@
 				9E2BEC771CF7BF7F0031D0E3 /* MyFriendsTableViewCell.swift in Sources */,
 				9EFCE4341CD158DA00B9ACC1 /* Reservation.swift in Sources */,
 				9E0E9B4F1CD2A05700F1F22D /* SoccerLocationTableViewCell.swift in Sources */,
+				674C63F01D0F4DF800A6CAB7 /* ReservationCollectionView.swift in Sources */,
 				9E3534B41CEF937B0098B0FF /* FieldCollectionViewCell.swift in Sources */,
 				9E5344461CDBC27D00D4CB88 /* ProfileViewController.swift in Sources */,
 				67770A3B1D08AF6E007E21C0 /* Friend.swift in Sources */,
+				67331A591D0F67B1004F390C /* ReservationHeaderViewCollectionReusableView.swift in Sources */,
 				67770A4E1D08B9EF007E21C0 /* ContactsViewController.swift in Sources */,
 				9EB549B51CE12ED20067D461 /* PlayerCollectionViewCell.swift in Sources */,
 				9E9862D01CA99E530075B016 /* FacebookFriend.swift in Sources */,
@@ -1011,6 +1026,7 @@
 				9E0E9B4D1CD29BB500F1F22D /* SoccerLocationsViewController.swift in Sources */,
 				9ECC248E1CA46A3C00E68315 /* AppDelegate.swift in Sources */,
 				9EB549B31CE1275B0067D461 /* GameDetailTableViewCell.swift in Sources */,
+				67EEA9091D0E6D850061660C /* ReservationFieldTime.swift in Sources */,
 				9E0E9B711CD81D4C00F1F22D /* UserProfileTableViewCell.swift in Sources */,
 				67770A501D08DBE8007E21C0 /* ContactView.swift in Sources */,
 				9E39DC2E1CEFACEE007D7824 /* globals.swift in Sources */,

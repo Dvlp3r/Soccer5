@@ -11,22 +11,24 @@ import AKPickerView_Swift
 import THCalendarDatePicker
 
 
-class MainReservationViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, THDatePickerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainReservationViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, THDatePickerDelegate, UICollectionViewDataSource {
     
 
     var user = User()
     var listOfReservations = [[String : AnyObject]]()
-    var reservationTime: String = ""
+    var reservationTime: ReservationFieldTime?
     var reservationDate: String = ""
     var reservationLocation: String = ""
     var reservationField: String = ""
     var textFieldData:String = "John"
     
-    let times = ["6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"]
+    var times = [ReservationFieldTime]()
+    //["6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"]
     var curDate : NSDate? = NSDate()
   
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var timeCollectionView: ReservationCollectionView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var locationOutlet: UILabel!
     @IBOutlet weak var pickerView: AKPickerView!
@@ -54,8 +56,12 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
 
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        self.setUpTimes()
+        
         selectedDateOutlet.title = formatter.stringFromDate(curDate!)
         setPickerViewOptions()
         menuButton.target = self.revealViewController()
@@ -78,6 +84,26 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             failureBlock: { (message) in
                 print(message)
         })
+    }
+    
+    func setUpTimes()
+    {
+        for i in 6..<12
+        {
+            let time = ReservationFieldTime(time: "\(i)", twelveHRSymbol: "AM")
+            self.times.append(time)
+        }
+        
+        let time = ReservationFieldTime(time: "12", twelveHRSymbol: "PM")
+        self.times.append(time)
+        
+        for i in 1..<13
+        {
+            let time = ReservationFieldTime(time: "\(i)", twelveHRSymbol: "PM")
+            self.times.append(time)
+        }
+        
+        self.timeCollectionView.reloadData()
     }
 
 
@@ -152,17 +178,28 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
        
-        return times.count
+        return self.times.count
     }
     
     
-    func pickerView(pickerView: AKPickerView, titleForItem item: Int) -> String {
+    func pickerView(pickerView: AKPickerView, titleForItem item: Int) -> String
+    {
+        let reservationTime = self.times[item] as ReservationFieldTime
        
-        return times[item]
+        return "\(reservationTime.twelveHRSymbol)\n\(reservationTime.time)"
     }
     
-    func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
-        reservationTime = times[item]
+    func pickerView(pickerView: AKPickerView, configureLabel label: UILabel, forItem item: Int)
+    {
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = 50
+        label.textAlignment = NSTextAlignment.Center
+    }
+    
+    func pickerView(pickerView: AKPickerView, didSelectItem item: Int)
+    {
+        self.reservationTime = self.times[item]
+        //reservationTime = times[item]
         collectionView.reloadData()
     }
     
@@ -190,9 +227,11 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         // TODO IMPLEMENT THIS LOGIC TO GET AT ALL RSERVATIONS FROM API
         let bool = false
         
-        for reservation in listOfReservations {
+        for reservation in listOfReservations
+        {
             
-            if reservation["time"]! as! String == reservationTime && reservation["date"]! as! String == reservationDate && reservation["location"]! as! String == reservationLocation && reservation["field"]! as! String == fieldType {
+            
+            if reservation["time"]! as! String == self.reservationTime!.getTimeString() && reservation["date"]! as! String == reservationDate && reservation["location"]! as! String == reservationLocation && reservation["field"]! as! String == fieldType {
                 return true
             }
         }
@@ -206,7 +245,13 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
     
     // custom collection views for each soccer location
     // -------------------------------------------------------------------------------
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        if collectionView == self.timeCollectionView
+        {
+            return 1
+        }
+        
         switch locationOutlet.text! {
         case "Soccer 5 Hialeah":
             return 1
@@ -218,7 +263,13 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
             return 0
         }
     }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        if collectionView == self.timeCollectionView
+        {
+            return self.times.count
+        }
+        
         switch locationOutlet.text! {
             case "Soccer 5 Hialeah":
                 return 2
@@ -231,7 +282,19 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         }
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        if collectionView == self.timeCollectionView
+        {
+            let time = self.times[indexPath.row]
+            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TimeCellIdentifier", forIndexPath: indexPath) as! TimeCell
+            cell.reservationTime = time
+            
+            return cell
+        }
+        
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FieldCell", forIndexPath: indexPath) as! FieldCollectionViewCell
 
         
@@ -262,6 +325,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                         if indexPath.row == 0 {
                             cell.fieldType.text = FieldType.Field6v6.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-6-6-tropical-park")
+                            //cell.fieldImage.contentMode = UIViewContentMode.BottomRight
                         } else {
                             cell.fieldType.text = FieldType.Field5v5.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-5-5-tropical-park")
@@ -284,6 +348,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                         if indexPath.row == 0 {
                             cell.fieldType.text = FieldType.Field6v6.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-6-6-kendall")
+                            cell.fieldImage.contentMode = UIViewContentMode.Bottom
                         } else {
                             cell.fieldType.text = FieldType.Field7v7.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-7-7-kendall")
@@ -292,6 +357,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                         if indexPath.row == 0 {
                             cell.fieldType.text = FieldType.Field5v5.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-5-5-kendall")
+                            //cell.fieldImage.contentMode = UIViewContentMode.Right
                         } else {
                             cell.fieldType.text = FieldType.Field5v5.stringValue()
                             cell.fieldImage.image = UIImage(named: "field-5-5-kendall")
@@ -314,9 +380,54 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
         
         return cell
     }
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
+    {
+        if collectionView == self.timeCollectionView
+        {
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderCellIdentifier", forIndexPath: indexPath)
+            return headerView
+        }
+        
+        return UICollectionReusableView()
+    }
+    
+    func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath)
+    {
+        print("DID END DISPLAYING: \(indexPath.item)")
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath)
+    {
+        print("DID HIGHLIGHT: \(indexPath.item)")
+    }
+    
+    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        
+        return true
+    }
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        print("DID DESELECT: \(indexPath.item)")
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        if collectionView == self.timeCollectionView
+        {
+            let time = self.times[indexPath.row]
+            
+         
+            return
+        }
+        
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! FieldCollectionViewCell
-        reservationTime = times[0]
+        
+        self.reservationTime = self.times[0]
+        //reservationTime = times[0]
         reservationField = cell.fieldType.text!
         reservationDate = formatter.stringFromDate(curDate!)
         reservationLocation = locationOutlet.text!
@@ -330,7 +441,7 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
                 "User_id": self.user.userID!,
                 "field": self.reservationField,
                 "date": self.reservationDate,
-                "time": self.reservationTime,
+                "time": self.reservationTime!.getTimeString(),
                 "location": self.reservationLocation
             ]
             self.listOfReservations.append(reservationDataArr)
@@ -373,6 +484,21 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
 
         
     }
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets
+    {
+        if collectionView == self.timeCollectionView
+        {
+            let leftEdge = (collectionView.bounds.size.width - 60) / 2
+            
+            return UIEdgeInsets.init(top: 0, left: leftEdge, bottom: 0, right: leftEdge)
+        }
+        
+        
+        return UIEdgeInsets.init()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -383,4 +509,38 @@ class MainReservationViewController: UIViewController, AKPickerViewDataSource, A
 
 }
 
+extension MainReservationViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
+{
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        
+        let numberOfItems = self.timeCollectionView.numberOfItemsInSection(0)
+        
+        
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView)
+    {
+        let numberOfItems = self.timeCollectionView.numberOfItemsInSection(0)
+        
+        if numberOfItems > 0
+        {
+            for i in 0 ..< numberOfItems
+            {
+                let indexPath = NSIndexPath(forItem: i, inSection: 0)
+                let cellSize = self.timeCollectionView.collectionView(self.timeCollectionView, layout: self.timeCollectionView.collectionViewLayout, sizeForItemAtIndexPath: indexPath)
+                
+                if self.timeCollectionView.offsetForItem(i) + cellSize.width / 2 > self.timeCollectionView.contentOffset.x
+                {
+                    self.timeCollectionView.selectItem(i, animated: true, notifySelection: true)
+                    break
+                    //self.timeCollectionView.selectItemAtIndexPath(NSIndexPath(forItem: item, inSection: 0), animated: true, scrollPosition: .None)
+                }
+                
+            }
+        }
+        
+    }
+
+}
 
