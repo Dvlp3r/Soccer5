@@ -60,7 +60,11 @@ class LoginViewController: UIViewController {
                 print("logged in a user with id: \(self.ud.userID)")
             },
             failureBlock: { (message) in
-                print(message)
+                if message == "401" {
+                    ErrorHandler.displayAlert("", message: "Invalid login credentials", okAction: nil)
+                    self.spinner.stopAnimating()
+                    self.spinner.hidden = true
+                }
             })
         }
     }
